@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3non1xjthbs5"]
+
+[sub_resource type="Animation" id="Animation_ldjtr"]
+resource_name = "faded"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.227),
+"transitions": PackedFloat32Array(1, 3.9999933),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2tjbc"]
+_data = {
+&"faded": SubResource("Animation_ldjtr")
+}
+
+[node name="Trail" type="Sprite2D"]
+self_modulate = Color(0, 0.5529412, 1, 0.44313726)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2tjbc")
+}
+autoplay = "faded"

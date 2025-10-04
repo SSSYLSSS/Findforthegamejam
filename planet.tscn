@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8v7h8ff8djto"]
+
+[ext_resource type="Script" uid="uid://bybtov056h22r" path="res://planet.gd" id="1_1odxm"]
+
+[node name="planet" type="Area2D"]
+script = ExtResource("1_1odxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

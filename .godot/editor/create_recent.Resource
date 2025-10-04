@@ -1,0 +1,3 @@
+DialogueGroup
+GDScript
+Resource

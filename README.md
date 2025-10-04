@@ -4,7 +4,7 @@
 
 - 设计了游戏基本思路, 定下了主题内容, 如下图
 
-![image-20251005031920779](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20251005031920779.png)
+![21327d3a43bb3d023d44675185a64fbf](https://github.com/user-attachments/assets/350fa1db-10c2-4b28-945e-2c68302e7969)
 
 - 写完了开场界面音乐以及Intro1
 - 制作了向心与斥心功能音效

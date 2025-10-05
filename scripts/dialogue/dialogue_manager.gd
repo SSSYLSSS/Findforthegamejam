@@ -11,6 +11,7 @@ var type_tween:Tween
 func _ready() -> void:
 	show_next_dialogue()
 
+
 func show_next_dialogue():
 	if dialogue_index>=len(main_dialogue.dialogue_list):
 		self.visible=false

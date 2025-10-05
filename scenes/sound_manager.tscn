@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmet5a2x3t1yx"]
+[gd_scene load_steps=11 format=3 uid="uid://dmet5a2x3t1yx"]
 
 [ext_resource type="Script" uid="uid://4earhug0urto" path="res://scripts/sound_manager.gd" id="1_5lwbd"]
 [ext_resource type="AudioStream" uid="uid://dxii44u81wyjf" path="res://assets/sounds/SFX/dash.wav" id="1_shlr6"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://chgks3ctdingd" path="res://assets/sounds/BGM/Intro2Flat.wav" id="7_aa63w"]
 [ext_resource type="AudioStream" uid="uid://x8y4i7j60rq6" path="res://assets/sounds/BGM/Intro1.wav" id="7_k1d7a"]
 [ext_resource type="AudioStream" uid="uid://dnlt4lvauy7c2" path="res://assets/sounds/BGM/OpeningMusic.wav" id="8_k1d7a"]
+[ext_resource type="AudioStream" uid="uid://dfe6skg56vthm" path="res://assets/sounds/BGM/Beginning.wav" id="10_gb18h"]
 
 [node name="SoundManager" type="Node"]
 process_mode = 3
@@ -49,3 +50,6 @@ bus = &"BGM"
 [node name="OpeningMusic" type="AudioStreamPlayer" parent="BGM"]
 stream = ExtResource("8_k1d7a")
 bus = &"BGM"
+
+[node name="Beginning" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("10_gb18h")

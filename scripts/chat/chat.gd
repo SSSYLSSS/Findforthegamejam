@@ -15,6 +15,7 @@ func _ready() -> void:
 	text.visible=false
 	text_box.visible=false
 	emoji.visible=false
+
 	
 func play_text_animation():
 	if chatting_index>=len(chatting.chatting_list):

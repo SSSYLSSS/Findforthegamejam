@@ -16,10 +16,9 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	pass
+	Input
 
 func feeling_system():
-	var feeling_tween:=create_tween()
 	text_box.visible=true
 	text_box.text="陌生的天花板"
 	text.visible=true
@@ -38,11 +37,7 @@ func feeling_system():
 	text_box.visible=false
 	emoji.play("sad")
 	emoji.visible=true
-	feeling_tween.tween_property(emoji,"position",Vector2(emoji.position.x,emoji.position.y-2.5),0.5)
-	feeling_tween.tween_property(emoji,"position",Vector2(emoji.position.x,emoji.position.y+2.5),0.5)
 	await get_tree().create_timer(1.5).timeout
 	emoji.play("confusing")
-	feeling_tween.tween_property(emoji,"position",Vector2(emoji.position.x,emoji.position.y-2.5),0.5)
-	feeling_tween.tween_property(emoji,"position",Vector2(emoji.position.x,emoji.position.y+2.5),0.5)
 	await get_tree().create_timer(1.0).timeout
 	emoji.visible=false

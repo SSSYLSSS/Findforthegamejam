@@ -48,6 +48,7 @@ metadata/_edit_horizontal_guides_ = [200.0, 0.0]
 position = Vector2(73, 103)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+process_callback = 0
 limit_top = 0
 limit_bottom = 200
 position_smoothing_enabled = true

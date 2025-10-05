@@ -12,7 +12,7 @@ func _on_timer_timeout() -> void:
 	after_death()
 
 func after_death():
-	LoadScene.change_scene(load(get_tree().current_scene.scene_file_path))
+	# LoadScene.change_scene(load(get_tree().current_scene.scene_file_path))
 	await get_tree().create_timer(1.0).timeout
 	player.position=spawn_point
 	

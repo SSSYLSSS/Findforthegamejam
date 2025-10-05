@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt4sdxigluw3a"
-path="res://.godot/imported/character.png-f1cd14801070c125d0bdee05755b7c1e.ctex"
+uid="uid://j43tug0vbxq2"
+path="res://.godot/imported/force_core-Sheet.png-03405e2670109c500cf84f57ba583b0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/canvas/character.png"
-dest_files=["res://.godot/imported/character.png-f1cd14801070c125d0bdee05755b7c1e.ctex"]
+source_file="res://assets/canvas/Others/force_core-Sheet.png"
+dest_files=["res://.godot/imported/force_core-Sheet.png-03405e2670109c500cf84f57ba583b0a.ctex"]
 
 [params]
 

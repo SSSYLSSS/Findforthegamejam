@@ -3,7 +3,7 @@ extends Node2D
 # 引力常数，控制引力强度
 @export var gravitational_constant: float = 1200.0
 # 有效距离，超出此距离不施加力
-@export var effective_distance: float = 40.0
+@export var effective_distance: float = 35.0
 # 最小距离，防止除以零错误
 @export var min_distance: float = 10.0
 # 时间缩放因子（0.1-1.0）
@@ -64,6 +64,8 @@ func apply_gravitational_force(target: Node2D, distance: float, delta: float) ->
 	
 	# 计算力的方向（单位向量）
 	var force_direction = to_center.normalized() * force_in_out
+	
+	print(force_direction)
 	
 	# 应用力到目标速度
 	if target is CharacterBody2D:

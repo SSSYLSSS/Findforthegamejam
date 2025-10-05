@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
-const DASH_SPEED: float = 400.0
+const DASH_SPEED: float = 350.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D

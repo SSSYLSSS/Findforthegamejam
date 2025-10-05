@@ -1,8 +1,8 @@
+AnimatedSprite2D
 Label
 CollisionShape2D
 Timer
 Area2D
-AnimatedSprite2D
 StaticBody2D
 TextureRect
 VBoxContainer

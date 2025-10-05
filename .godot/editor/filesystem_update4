@@ -1,10 +1,2 @@
-res://scenes/main.tscn
-res://planet.tscn
-res://scenes/player.tscn
-res://scripts/player.gd
-res://planet.gd
-res://scenes/item.tscn
-res://scripts/UI/menu.gd
-res://scenes/menu.tscn
-res://scripts/core/death_zone.gd
-res://scenes/death_zone.tscn
+res://assets/dialogues/dialogue#1.tres
+res://scenes/force_core.tscn

@@ -1,6 +1,3 @@
-res://assets/dialogues/dialogue#1.tres
 res://scenes/force_core.tscn
-res://force_core.gd
-res://scenes/main.tscn
-res://scripts/player.gd
-res://scenes/player.tscn
+res://scenes/force_core.gdshader
+res://assets/dialogues/dialogue#1.tres

@@ -1,7 +1,10 @@
+ColorRect
+Timer
+Node
+AudioStreamPlayer
 AnimatedSprite2D
 Label
 CollisionShape2D
-Timer
 Area2D
 StaticBody2D
 TextureRect
@@ -10,5 +13,3 @@ Button
 Control
 RigidBody2D
 Node2D
-Sprite2D
-Camera2D

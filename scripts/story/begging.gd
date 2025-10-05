@@ -16,34 +16,43 @@ extends Node2D
 var can_be_preesed:=false
 
 func _ready() -> void:
-	player.position=beginning_pos
+	player.position=beginning_pos #主角传送到指定位置
 	emoji.visible=false
 	click.visible=false
 	can_be_preesed=false
 	text.visible=false
+	#防止还没加载完就移动
 	await get_tree().create_timer(1.0).timeout
 	play_player_animation()
-	await get_tree().create_timer(5.2).timeout
-	click.visible=true
+	
 
 func play_player_animation():
+	#显示对话
 	text.visible=true
 	text_box.text="...难受..."
 	var player_tween:Tween=create_tween()
 	player_tween.tween_property(player,"position",ending_pos,3)
 	await player_tween.finished
+	#切换动作
 	anim.play("idle")
-	emoji.play("emotional")
 	text.visible=false
+	#显示表情
+	await get_tree().create_timer(0.5).timeout
+	emoji.play("emotional")
 	play_emoji_animation()
 	
 func play_emoji_animation():
 	emoji.visible=true
+	#处理动画
 	var emoji_tween:=create_tween().set_ease(Tween.EASE_IN_OUT)
 	emoji_tween.tween_property(emoji,"position",Vector2(emoji.position.x,emoji.position.y-2.5),0.5)
 	emoji_timer.start()
+	#让玩家自己推进剧情
+	await emoji_timer.timeout
+	click.visible=true
 
 func play_bed_animation():
+	#很诡异的动画
 	anim.play("goto_bed")
 	await anim.animation_finished
 	emoji.play("comfortable")
@@ -51,10 +60,12 @@ func play_bed_animation():
 	await emoji_timer.timeout
 
 func _on_emoji_timer_timeout() -> void:
+	#把表情移回原处
 	emoji.visible=false
 	emoji.position=Vector2(emoji.position.x,emoji.position.y+2.5)
 
 func _on_click_gui_input(event: InputEvent) -> void:
+	#左键推进剧情
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and event is InputEventMouseButton:
 		if not can_be_preesed:
 			play_bed_animation()

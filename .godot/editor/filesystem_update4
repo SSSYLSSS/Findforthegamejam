@@ -1,8 +1,0 @@
-res://scenes/force_core.gdshader
-res://scenes/storys/begging.tscn
-res://scripts/story/begging.gd
-res://assets/shaders/loadingshader.gdshader
-res://scenes/UI/load_scene.tscn
-res://scripts/UI/change_scene.gd
-res://scenes/menu.tscn
-res://scripts/UI/menu.gd

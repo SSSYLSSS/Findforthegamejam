@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="FinD"
-run/main_scene="uid://b7rr7xpc8u3k4"
+run/main_scene="uid://kqso6bwn4xx0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SoundManager="*res://scenes/sound_manager.tscn"
+LoadScene="*res://scenes/UI/load_scene.tscn"
 
 [display]
 

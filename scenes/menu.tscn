@@ -2,34 +2,34 @@
 
 [ext_resource type="Script" uid="uid://gxhpxsi4d07j" path="res://scripts/UI/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_yqeox"]
-[ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/main.tscn" id="2_mhnvy"]
-[ext_resource type="Texture2D" uid="uid://p23tt5hxn2ym" path="res://assets/canvas/CharacterBasicMovement.png" id="3_con2f"]
+[ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/storys/beginning.tscn" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="4_4ytvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnvy"]
 size = Vector2(177, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
-atlas = ExtResource("3_con2f")
+atlas = ExtResource("4_4ytvr")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mj5lg"]
@@ -66,7 +66,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjb58")
-MainScene = ExtResource("2_mhnvy")
+next_scene = ExtResource("2_4ytvr")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -130,6 +130,10 @@ position = Vector2(99, 91)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_mj5lg")
 autoplay = "default"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]

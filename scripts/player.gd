@@ -38,6 +38,7 @@ var sit_animation_frame: int = 0
 var sit_animation_progress: float = 0.0
 
 func _ready() -> void:
+	add_to_group("player")
 	change_state(PlayerState.IDLE)
 	was_on_floor = is_on_floor()
 	
@@ -324,6 +325,7 @@ func handle_dash_input() -> void:
 		change_state(PlayerState.DASH)
 
 func start_dash() -> void:
+	SoundManager.play_sfx("Dash")
 	# 获取八方向输入
 	var input_vector := get_movement_input()
 	

@@ -1,6 +1,9 @@
+Node
+Node2D
+CPUParticles2D
+GPUParticles2D
 ColorRect
 Timer
-Node
 AudioStreamPlayer
 AnimatedSprite2D
 Label
@@ -9,7 +12,3 @@ Area2D
 StaticBody2D
 TextureRect
 VBoxContainer
-Button
-Control
-RigidBody2D
-Node2D

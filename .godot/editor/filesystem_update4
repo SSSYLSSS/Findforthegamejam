@@ -1,3 +1,6 @@
 res://scenes/force_core.tscn
 res://scenes/force_core.gdshader
 res://assets/dialogues/dialogue#1.tres
+res://scripts/gpu_particles_2d.gd
+res://scenes/cpu_particles_2d.gd
+res://scenes/rotateforcore.gd

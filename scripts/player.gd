@@ -325,6 +325,7 @@ func handle_dash_input() -> void:
 		change_state(PlayerState.DASH)
 
 func start_dash() -> void:
+	SoundManager.play_sfx("Dash")
 	# 获取八方向输入
 	var input_vector := get_movement_input()
 	

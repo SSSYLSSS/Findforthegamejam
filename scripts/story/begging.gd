@@ -24,6 +24,8 @@ func _ready() -> void:
 	#防止还没加载完就移动
 	await get_tree().create_timer(1.0).timeout
 	play_player_animation()
+	SoundManager.play_bgm("Beginning")
+	print("ready")
 	
 
 func play_player_animation():

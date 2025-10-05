@@ -15,17 +15,15 @@ script = ExtResource("1_1odxm")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_mtr83")
 
-[node name="Round" type="Area2D" parent="."]
-gravity_space_override = 3
-gravity_point = true
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Round"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mtr83")
 
-[node name="Barrier" type="StaticBody2D" parent="."]
+[node name="Area2D2" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource("CircleShape2D_a75xc")
 
-[connection signal="body_entered" from="Round" to="." method="_on_body_entered"]
-[connection signal="body_exited" from="Round" to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

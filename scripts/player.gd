@@ -441,5 +441,4 @@ func get_dash_animation(direction: Vector2) -> String:
 		return "dash_forward"
 
 func _on_dash_timer_timeout() -> void:
-	
 	can_dash = true

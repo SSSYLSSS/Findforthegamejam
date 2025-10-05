@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://kqso6bwn4xx0"]
+[gd_scene load_steps=13 format=3 uid="uid://kqso6bwn4xx0"]
 
 [ext_resource type="Script" uid="uid://gxhpxsi4d07j" path="res://scripts/UI/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_yqeox"]
 [ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/storys/beginning.tscn" id="2_4ytvr"]
-[ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/character.png" id="4_4ytvr"]
-[ext_resource type="AudioStream" uid="uid://dnlt4lvauy7c2" path="res://assets/sounds/BGM/OpeningMusic.wav" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="4_4ytvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnvy"]
 size = Vector2(177, 48)
@@ -131,10 +130,6 @@ position = Vector2(99, 91)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_mj5lg")
 autoplay = "default"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_4ytvr")
-autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

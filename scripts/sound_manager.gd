@@ -38,7 +38,7 @@ func setup_ui_sounds(node: Node) -> void:
 	for child in node.get_children():
 		setup_ui_sounds(child)
 		
-func play_bgm(name: String, fade_in_time: float = 0.5) -> void:
+func play_bgm(name: String, fade_in_time: float = 1.0) -> void:
 	var player := bgm.get_node(name) as AudioStreamPlayer
 	if not player:
 		return
@@ -53,7 +53,7 @@ func play_bgm(name: String, fade_in_time: float = 0.5) -> void:
 	
 	# 淡入效果
 	if fade_in_time > 0:
-		player.volume_db = -80  # 从静音开始
+		player.volume_db = -40  # 从静音开始
 		player.play()
 		
 		var tween = create_tween()

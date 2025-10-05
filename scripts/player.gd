@@ -89,7 +89,7 @@ func update_coyote_time() -> void:
 		coyote_time_active = true
 		if coyote_timer:
 			coyote_timer.start()
-		print("郊狼时间启动")
+		#print("郊狼时间启动")
 	
 	# 如果回到地面，取消郊狼时间
 	if is_on_floor():
@@ -100,12 +100,12 @@ func update_coyote_time() -> void:
 func _on_coyote_timer_timeout() -> void:
 	# 郊狼时间结束
 	coyote_time_active = false
-	print("郊狼时间结束")
+	#print("郊狼时间结束")
 
 func _on_jump_buffer_timer_timeout() -> void:
 	# 跳跃缓冲时间结束
 	jump_buffer_active = false
-	print("跳跃缓冲结束")
+	#print("跳跃缓冲结束")
 
 func change_state(new_state: PlayerState) -> void:
 	previous_state = current_state
@@ -253,7 +253,7 @@ func handle_jump_input() -> void:
 		jump_buffer_active = true
 		if jump_buffer_timer:
 			jump_buffer_timer.start()
-		print("跳跃输入检测，启动跳跃缓冲")
+		#print("跳跃输入检测，启动跳跃缓冲")
 	
 	# 检查是否可以执行跳跃（包括郊狼时间和跳跃缓冲）
 	var can_jump = (is_on_floor() or coyote_time_active) and current_state != PlayerState.SIT
@@ -269,7 +269,7 @@ func handle_jump_input() -> void:
 			coyote_timer.stop()
 		if jump_buffer_timer:
 			jump_buffer_timer.stop()
-		print("跳跃执行")
+		#print("跳跃执行")
 	
 	# 另外，检查跳跃缓冲是否活跃并且当前满足条件（例如刚刚落地）
 	if jump_buffer_active and is_on_floor() and current_state != PlayerState.SIT:
@@ -278,7 +278,7 @@ func handle_jump_input() -> void:
 		jump_buffer_active = false
 		if jump_buffer_timer:
 			jump_buffer_timer.stop()
-		print("跳跃缓冲执行")
+		#print("跳跃缓冲执行")
 
 func handle_movement_input() -> void:
 	var input_vector := get_movement_input()
@@ -293,7 +293,7 @@ func handle_movement_input() -> void:
 
 	if input_vector.length() > 0:
 		velocity.x = input_vector.x * SPEED
-	else:
+	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 # 检查是否有水平输入

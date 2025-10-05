@@ -4,7 +4,7 @@ extends Area2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 
 var is_positive: bool = true
-var float_time: float = 0.0  # 用于浮动的计时器
+var float_time: float = 0.5  # 用于浮动的计时器
 var float_height: float = 0.004  # 浮动高度（像素）
 var float_speed: float = 0.3  # 浮动速度（每秒周期数）
 

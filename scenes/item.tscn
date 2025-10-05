@@ -111,6 +111,42 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g6oc")
 }],
 "loop": true,
 "name": &"up",
@@ -121,11 +157,13 @@ animations = [{
 script = ExtResource("1_s8enn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_6muww")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ox7tp")
 animation = &"up"
-frame_progress = 0.9450833
+autoplay = "up"
+frame_progress = 0.61829114
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

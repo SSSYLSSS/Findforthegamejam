@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	for button: Button in $VBoxContainer.get_children():
 		button.mouse_entered.connect(button.grab_focus)
-	
+	SoundManager.play_bgm("OpeningMusic")
 	SoundManager.setup_ui_sounds(self)
 	
 	# 连接计时器信号
@@ -19,6 +19,7 @@ func _ready() -> void:
 	timer.one_shot = true
 
 func _on_start_button_pressed() -> void:
+	SoundManager.stop_bgm("OpeningMusic")
 	LoadScene.change_scene(next_scene)
 	#get_tree().change_scene_to_packed(MainScene)
 

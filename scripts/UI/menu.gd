@@ -19,7 +19,8 @@ func _ready() -> void:
 	timer.one_shot = true
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_packed(MainScene)
+	LoadScene.change_scene(MainScene)
+	#get_tree().change_scene_to_packed(MainScene)
 
 func _on_setting_button_pressed() -> void:
 	pass # Replace with function body.

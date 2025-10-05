@@ -38,6 +38,7 @@ var sit_animation_frame: int = 0
 var sit_animation_progress: float = 0.0
 
 func _ready() -> void:
+	add_to_group("player")
 	change_state(PlayerState.IDLE)
 	was_on_floor = is_on_floor()
 	

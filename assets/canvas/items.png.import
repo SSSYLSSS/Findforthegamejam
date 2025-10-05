@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt4sdxigluw3a"
-path="res://.godot/imported/FUKINGLastmovesheet.png-4ea667612decc5140f549f5e5cbf0675.ctex"
+uid="uid://dk42tupjffil5"
+path="res://.godot/imported/items.png-475e31c162152e03ac4671d89d8350bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/canvas/FUKINGLastmovesheet.png"
-dest_files=["res://.godot/imported/FUKINGLastmovesheet.png-4ea667612decc5140f549f5e5cbf0675.ctex"]
+source_file="res://assets/canvas/items.png"
+dest_files=["res://.godot/imported/items.png-475e31c162152e03ac4671d89d8350bc.ctex"]
 
 [params]
 

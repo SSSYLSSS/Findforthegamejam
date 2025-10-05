@@ -5,7 +5,7 @@ extends Control
 @onready var exit_button: Button = $VBoxContainer/ExitButton
 @onready var timer: Timer = $Timer  
 
-@export var MainScene: PackedScene
+@export var next_scene: PackedScene
 
 func _ready() -> void:
 	for button: Button in $VBoxContainer.get_children():
@@ -19,7 +19,7 @@ func _ready() -> void:
 	timer.one_shot = true
 
 func _on_start_button_pressed() -> void:
-	LoadScene.change_scene(MainScene)
+	LoadScene.change_scene(next_scene)
 	#get_tree().change_scene_to_packed(MainScene)
 
 func _on_setting_button_pressed() -> void:

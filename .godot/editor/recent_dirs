@@ -1,8 +1,10 @@
+res://scenes
+res://scripts/core
+res://assets/fonts
 res://assets/canvas
+res://scripts/UI
 res://
 res://assets
-res://scenes
-res://scripts/Items
 res://assets/dialogues
 res://scripts/dialogue
 res://scripts

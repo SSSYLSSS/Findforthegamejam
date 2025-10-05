@@ -3,3 +3,4 @@ res://scenes/force_core.tscn
 res://force_core.gd
 res://scenes/main.tscn
 res://scripts/player.gd
+res://scenes/player.tscn

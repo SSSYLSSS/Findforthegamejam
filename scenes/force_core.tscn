@@ -46,4 +46,4 @@ script = ExtResource("1_kfe77")
 sprite_frames = SubResource("SpriteFrames_37lqo")
 animation = &"core"
 autoplay = "core"
-frame_progress = 0.8732716
+frame_progress = 0.5228673

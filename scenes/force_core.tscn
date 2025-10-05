@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba6u3w4jkqvmd"]
+
+[ext_resource type="Script" uid="uid://bgxg1x78uegd3" path="res://force_core.gd" id="1_kfe77"]
+[ext_resource type="Texture2D" uid="uid://j43tug0vbxq2" path="res://assets/canvas/force_core-Sheet.png" id="2_k3qlo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccmp6"]
+atlas = ExtResource("2_k3qlo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrv5s"]
+atlas = ExtResource("2_k3qlo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndy2h"]
+atlas = ExtResource("2_k3qlo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnful"]
+atlas = ExtResource("2_k3qlo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37lqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccmp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrv5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndy2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnful")
+}],
+"loop": true,
+"name": &"core",
+"speed": 4.0
+}]
+
+[node name="force_core" type="Node2D"]
+script = ExtResource("1_kfe77")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_37lqo")
+animation = &"core"
+frame_progress = 0.24779317

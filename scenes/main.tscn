@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7rr7xpc8u3k4"]
+[gd_scene load_steps=6 format=3 uid="uid://b7rr7xpc8u3k4"]
 
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://8v7h8ff8djto" path="res://planet.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/death_zone.tscn" id="3_sugp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(356, 72)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
+distance = -166.0
 
 [node name="Main" type="Node"]
 
@@ -19,3 +23,10 @@ shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="planet" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(233, 31)
+
+[node name="DeathZone" parent="." instance=ExtResource("3_sugp2")]
+position = Vector2(233, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(-134, -1)
+shape = SubResource("WorldBoundaryShape2D_jyhfs")

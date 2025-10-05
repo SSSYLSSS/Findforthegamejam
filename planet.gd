@@ -6,7 +6,7 @@ var is_in_area: bool
 var is_jumping:bool=false
 var target: CharacterBody2D
 var orbit_speed: float = 3.0  # 公转速度
-var orbit_direction: int = -1  # 1为顺时针，-1为逆时针
+var orbit_direction: int = -1  # -1为顺时针，1为逆时针
 
 func _physics_process(delta: float) -> void:
 	if is_in_area and target and not is_jumping:

@@ -1,9 +1,14 @@
+res://scripts/UI
+res://scenes/UI
+res://assets/shaders
+res://assets/emoji
+res://scripts/story
+res://scenes/storys
 res://assets/canvas
 res://scenes
 res://scripts
 res://scripts/core
 res://assets/fonts
-res://scripts/UI
 res://
 res://assets
 res://assets/dialogues

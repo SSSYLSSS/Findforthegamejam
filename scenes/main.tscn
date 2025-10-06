@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=12 format=4 uid="uid://b7rr7xpc8u3k4"]
+=======
+[gd_scene load_steps=20 format=4 uid="uid://b7rr7xpc8u3k4"]
+>>>>>>> Stashed changes
 =======
 [gd_scene load_steps=20 format=4 uid="uid://b7rr7xpc8u3k4"]
 >>>>>>> Stashed changes
@@ -17,6 +21,9 @@
 [ext_resource type="Resource" uid="uid://b5ucvj7gekvxr" path="res://assets/spwan/chapter_1.tres" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://xjvsw0ib63wc" path="res://scenes/negative_item.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://busr6qw7oalte" path="res://scenes/positive_item.tscn" id="11_ya4ey"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
@@ -179,6 +186,9 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 a = Vector2(5, -126)
 b = Vector2(5, 19)
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 [node name="Main" type="Node"]
 script = ExtResource("1_tbgi4")
@@ -271,4 +281,7 @@ position = Vector2(560, 112)
 
 [connection signal="death" from="Trap" to="." method="_on_trap_death"]
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

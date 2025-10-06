@@ -57,4 +57,7 @@ func _on_exit_area_body_entered(body: Node2D) -> void:
 		var player:CharacterBody2D=body
 		player.velocity=Vector2.ZERO
 		LoadScene.change_scene(next_scene)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

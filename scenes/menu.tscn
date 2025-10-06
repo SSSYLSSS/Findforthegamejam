@@ -1,11 +1,95 @@
-[gd_scene load_steps=40 format=3 uid="uid://kqso6bwn4xx0"]
+[gd_scene load_steps=58 format=3 uid="uid://kqso6bwn4xx0"]
 
 [ext_resource type="Script" uid="uid://gxhpxsi4d07j" path="res://scripts/UI/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_yqeox"]
 [ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/chapter/chapter_0.tscn" id="2_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="4_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://yq3aaayvl11d" path="res://assets/canvas/Others/maybeaicon.png" id="4_v86rl"]
 [ext_resource type="Texture2D" uid="uid://culppcsmyr08c" path="res://assets/canvas/Others/starsback.png" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://hati700nrxjq" path="res://assets/canvas/Others/maybeaicon2.png" id="5_13sgg"]
+[ext_resource type="Texture2D" uid="uid://caqqoecfc588h" path="res://assets/canvas/Others/maybeaicon3.png" id="5_i6lef"]
 [ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="6_g3eks"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
+texture = ExtResource("4_v86rl")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+region_rect = Rect2(0, 0, 192, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6lef"]
+texture = ExtResource("5_i6lef")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70i5f"]
+texture = ExtResource("5_13sgg")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mj5lg"]
+texture = ExtResource("5_i6lef")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6lef"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cdou"]
+texture = ExtResource("4_v86rl")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i42df"]
+texture = ExtResource("5_i6lef")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jp70"]
+texture = ExtResource("5_13sgg")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70i5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj5lg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufwb2"]
+texture = ExtResource("4_v86rl")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxgkd"]
+texture = ExtResource("5_i6lef")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6gyw"]
+texture = ExtResource("5_13sgg")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3dmrc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_81l6r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnvy"]
 size = Vector2(177, 48)
@@ -261,26 +345,41 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -82.0
-offset_top = -37.5
+offset_left = -166.0
+offset_top = -57.5
 offset_right = -22.0
-offset_bottom = 37.5
+offset_bottom = 57.5
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yqeox")
+theme_override_styles/normal = SubResource("StyleBoxTexture_13sgg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
+theme_override_styles/hover = SubResource("StyleBoxTexture_70i5f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mj5lg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i6lef")
 text = "开始游戏"
 
 [node name="SettingButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yqeox")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6cdou")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i42df")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7jp70")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_70i5f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mj5lg")
 text = "设置"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yqeox")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufwb2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mxgkd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g6gyw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3dmrc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_81l6r")
 text = "退出游戏"
 
 [node name="Title" type="Label" parent="."]

@@ -5,6 +5,8 @@ extends Node
 @onready var text_box: Label = $Player/Text/TextBox
 @onready var text_timer: Timer = $Player/TextTimer
 
+@export var next_scene:PackedScene
+
 func _ready() -> void:
 	SoundManager.play_bgm("Intro1")
 	emoji.visible=false
@@ -46,3 +48,10 @@ func _on_trap_death() -> void:
 	emoji.visible=true
 	await get_tree().create_timer(1.5).timeout
 	emoji.visible=false
+
+
+func _on_exit_area_body_entered(body: Node2D) -> void:
+	if body.name=="Player":
+		var player:CharacterBody2D=body
+		player.velocity=Vector2.ZERO
+		LoadScene.change_scene(next_scene)

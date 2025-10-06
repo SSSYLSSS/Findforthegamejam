@@ -7,7 +7,7 @@ extends Node2D
 # 最小距离，防止除以零错误
 @export var min_distance: float = 10.0
 
-@export var force_in_out: int = 1 #-1为斥力
+var force_in_out: int = 1
 
 # 存储所有可能受引力影响的目标
 var potential_targets: Array = []
@@ -78,3 +78,9 @@ func set_effective_distance(new_distance: float):
 # 更新引力常数的方法
 func set_gravitational_constant(new_constant: float):
 	gravitational_constant = new_constant
+
+func _on_negative_item_negative_hit() -> void:
+	force_in_out = 1
+	
+func _on_positive_item_positive_hit() -> void:
+	force_in_out = -1

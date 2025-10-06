@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bt23ejdebo3ik"]
+[gd_scene load_steps=24 format=3 uid="uid://bt23ejdebo3ik"]
 
 [ext_resource type="Script" uid="uid://nd68ul7yx4to" path="res://scripts/story/begging.gd" id="1_d8e8j"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="2_mveoo"]
 [ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/main.tscn" id="2_xj3lg"]
 [ext_resource type="Texture2D" uid="uid://ck87bghdnh0kk" path="res://assets/emoji/emoji.png" id="3_mveoo"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="5_2x8kr"]
+[ext_resource type="Texture2D" uid="uid://bqigato7o5r85" path="res://assets/canvas/Others/bedroomAnimation-Sheet.png" id="6_vqrml"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mveoo"]
 atlas = ExtResource("3_mveoo")
@@ -145,7 +146,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(112, 115), Vector2(100, 80), Vector2(55, 71)]
+"values": [Vector2(112, 93), Vector2(100, 80), Vector2(55, 71)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -252,11 +253,76 @@ _data = {
 &"walk": SubResource("Animation_d8e8j")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_00wyt"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx6p6"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orawv"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d82id"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq5n1"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsdci"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(1600, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkj20"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(1920, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_funkb"]
+atlas = ExtResource("6_vqrml")
+region = Rect2(2240, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsniw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00wyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx6p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orawv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d82id")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq5n1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsdci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkj20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_funkb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Beginning" type="Node2D"]
 script = ExtResource("1_d8e8j")
-beginning_pos = Vector2(300, 115)
-ending_pos = Vector2(112, 115)
+beginning_pos = Vector2(300, 93)
+ending_pos = Vector2(112, 93)
 next_scene = ExtResource("2_xj3lg")
+metadata/_edit_horizontal_guides_ = [133.0]
 
 [node name="Click" type="Control" parent="."]
 layout_mode = 3
@@ -267,7 +333,7 @@ offset_bottom = 181.0
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(55, 71)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_mveoo")
 flip_h = true
 hframes = 4
@@ -313,6 +379,12 @@ one_shot = true
 [node name="ClickTimer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+z_index = -10
+position = Vector2(161, 91)
+sprite_frames = SubResource("SpriteFrames_fsniw")
+autoplay = "default"
 
 [connection signal="gui_input" from="Click" to="." method="_on_click_gui_input"]
 [connection signal="timeout" from="EmojiTimer" to="." method="_on_emoji_timer_timeout"]

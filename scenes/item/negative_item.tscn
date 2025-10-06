@@ -156,11 +156,12 @@ animations = [{
 [sub_resource type="Environment" id="Environment_4pl8r"]
 background_mode = 3
 glow_enabled = true
-glow_intensity = 0.39
-glow_strength = 1.33
+glow_normalized = true
+glow_intensity = 6.96
+glow_bloom = 0.02
 glow_blend_mode = 1
 glow_hdr_threshold = 0.0
-glow_hdr_scale = 2.09
+glow_hdr_scale = 2.83
 
 [node name="NegativeItem" type="Area2D"]
 script = ExtResource("1_s8enn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bw5hpqn03832n"]
+[gd_scene load_steps=21 format=4 uid="uid://bw5hpqn03832n"]
 
 [ext_resource type="Script" uid="uid://cbhm32penort2" path="res://scripts/chapter/chapter_1.gd" id="1_fnxso"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_yvy84"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dima2d08oc7a1" path="res://scenes/core/hide_scene.tscn" id="10_68p84"]
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="11_kto45"]
 [ext_resource type="Resource" uid="uid://qxe3q5prxo27" path="res://assets/scene/chapter_2_1.tres" id="12_7024r"]
+[ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="13_1kbkq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xceyt"]
 texture = ExtResource("2_fnxso")
@@ -426,5 +427,11 @@ scene = ExtResource("12_7024r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea1"]
 position = Vector2(768, 48)
 shape = SubResource("SegmentShape2D_7024r")
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(395, 214)
+scale = Vector2(4, 4)
+texture = ExtResource("13_1kbkq")
 
 [connection signal="body_entered" from="Items/PositiveItem" to="Items/PositiveItem" method="_on_body_entered"]

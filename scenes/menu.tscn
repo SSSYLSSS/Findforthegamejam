@@ -1,14 +1,66 @@
-[gd_scene load_steps=58 format=3 uid="uid://kqso6bwn4xx0"]
+[gd_scene load_steps=60 format=3 uid="uid://kqso6bwn4xx0"]
 
 [ext_resource type="Script" uid="uid://gxhpxsi4d07j" path="res://scripts/UI/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_yqeox"]
 [ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/chapter/chapter_0.tscn" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bsu0rymo6kifc" path="res://assets/canvas/Others/maytitle.png" id="3_70i5f"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="4_4ytvr"]
+[ext_resource type="Script" uid="uid://0w34jgtudcyd" path="res://scenes/titlemove.gd" id="4_mj5lg"]
 [ext_resource type="Texture2D" uid="uid://yq3aaayvl11d" path="res://assets/canvas/Others/maybeaicon.png" id="4_v86rl"]
 [ext_resource type="Texture2D" uid="uid://culppcsmyr08c" path="res://assets/canvas/Others/starsback.png" id="5_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://hati700nrxjq" path="res://assets/canvas/Others/maybeaicon2.png" id="5_13sgg"]
 [ext_resource type="Texture2D" uid="uid://caqqoecfc588h" path="res://assets/canvas/Others/maybeaicon3.png" id="5_i6lef"]
 [ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="6_g3eks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mj5lg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3eks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v86rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13sgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6lef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70i5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
 texture = ExtResource("4_v86rl")
@@ -93,56 +145,6 @@ texture_margin_bottom = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnvy"]
 size = Vector2(177, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
-atlas = ExtResource("4_4ytvr")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mj5lg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ytvr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g3eks")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v86rl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_13sgg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6lef")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_70i5f")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mj5lg"]
 atlas = ExtResource("5_4ytvr")
@@ -330,6 +332,20 @@ grow_vertical = 2
 script = ExtResource("1_vjb58")
 next_scene = ExtResource("2_4ytvr")
 
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(152.025, 86.665)
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("3_70i5f")
+offset = Vector2(-63.01, 0)
+script = ExtResource("4_mj5lg")
+
+[node name="Player" type="AnimatedSprite2D" parent="title"]
+position = Vector2(3.065, -18.285)
+rotation = -0.23736478
+scale = Vector2(1.78, 1.78)
+sprite_frames = SubResource("SpriteFrames_mj5lg")
+autoplay = "default"
+
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -345,12 +361,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -166.0
-offset_top = -57.5
-offset_right = -22.0
-offset_bottom = 57.5
+offset_left = -127.354996
+offset_top = -75.29
+offset_right = 16.645752
+offset_bottom = 103.71001
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(0.835, 0.835)
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -383,6 +400,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_81l6r")
 text = "退出游戏"
 
 [node name="Title" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -399,14 +417,9 @@ text = "FinD"
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(87.5, 155)
 shape = SubResource("RectangleShape2D_mhnvy")
-
-[node name="Player" type="AnimatedSprite2D" parent="."]
-position = Vector2(99, 91)
-scale = Vector2(2.5, 2.5)
-sprite_frames = SubResource("SpriteFrames_mj5lg")
-autoplay = "default"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

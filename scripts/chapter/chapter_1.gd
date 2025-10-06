@@ -1,11 +1,11 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
+@onready var player: CharacterBody2D = $Player
+
 func _ready() -> void:
 	SoundManager.play_bgm("Intro2Flat")
 	SoundManager.stop_bgm("Intro1")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	player.visible=true
+	
 func _process(delta: float) -> void:
 	pass

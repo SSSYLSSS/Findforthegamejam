@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/death_zone.tscn" id="8_85g3d"]
 [ext_resource type="Resource" uid="uid://b5ucvj7gekvxr" path="res://assets/spwan/chapter_1.tres" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://be4onq2myvvbv" path="res://scripts/exit/chapter_1.gd" id="9_eb6dy"]
-[ext_resource type="PackedScene" uid="uid://xjvsw0ib63wc" path="res://scenes/negative_item.tscn" id="10_choun"]
+[ext_resource type="PackedScene" path="res://scenes/negative_item.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_1.tscn" id="10_trceg"]
-[ext_resource type="PackedScene" uid="uid://busr6qw7oalte" path="res://scenes/positive_item.tscn" id="11_ya4ey"]
+[ext_resource type="PackedScene" path="res://scenes/positive_item.tscn" id="11_ya4ey"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
 atlas = ExtResource("3_tefeu")

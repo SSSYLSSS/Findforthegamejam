@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SpawnPoint" load_steps=2 format=3 uid="uid://b5ucvj7gekvxr"]
+
+[ext_resource type="Script" uid="uid://36utgay0ra" path="res://scripts/spawn/spawn_point.gd" id="1_ylxyj"]
+
+
+[resource]
+script = ExtResource("1_ylxyj")
+spawn_point = Vector2(73, 103)
+player_path = NodePath("Player")
+metadata/_custom_type_script = "uid://36utgay0ra"

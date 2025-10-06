@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SpawnPoint" load_steps=2 format=3 uid="uid://hfm4fv380kx4"]
+
+[ext_resource type="Script" uid="uid://36utgay0ra" path="res://scripts/spawn/spawn_point.gd" id="1_ijckg"]
+
+[resource]
+script = ExtResource("1_ijckg")
+spawn_point = Vector2(-16, -8)
+metadata/_custom_type_script = "uid://36utgay0ra"

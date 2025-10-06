@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://de5ua6mc7lko2"]
+
+[ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_62q8x"]
+[ext_resource type="Script" uid="uid://ctpd44g3aoh0s" path="res://scripts/item/trap.gd" id="1_aucmg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npg1n"]
+size = Vector2(16, 3)
+
+[node name="Trap" type="Area2D"]
+script = ExtResource("1_aucmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_62q8x")
+region_enabled = true
+region_rect = Rect2(64, 160, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_npg1n")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

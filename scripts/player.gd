@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -260.0
-const DASH_SPEED: float = 350.0
+const JUMP_VELOCITY = -300.0
+const DASH_SPEED: float = 200.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
@@ -12,6 +12,7 @@ const DASH_SPEED: float = 350.0
 
 var can_dash: bool = true
 var dash_direction: Vector2 = Vector2.ZERO
+var can_move:bool = true
 
 # 郊狼跳跃相关变量
 var was_on_floor: bool = false
@@ -72,13 +73,12 @@ func _physics_process(delta: float) -> void:
 			handle_dash_state(delta)
 		PlayerState.SIT:
 			handle_sit_state(delta)
-	
-	# 处理跳跃输入（在所有状态处理之后）
-	handle_jump_input()
-	
-	move_and_slide()
-	update_animation()
-	
+	if can_move:
+		# 处理跳跃输入（在所有状态处理之后）
+		handle_jump_input()
+		
+		move_and_slide()
+		update_animation()
 	# 更新地面状态
 	was_on_floor = current_on_floor
 
@@ -124,7 +124,7 @@ func handle_idle_state(_delta: float) -> void:
 	handle_movement_input()
 	
 	# 检查是否应该坐下
-	if Input.is_action_just_pressed("down") and is_on_floor():
+	if Input.is_action_just_pressed("down") and is_on_floor() and can_move:
 		change_state(PlayerState.SIT)
 		return
 	
@@ -247,6 +247,8 @@ func apply_custom_gravity(delta: float) -> void:
 		velocity += gravity * delta
 
 func handle_jump_input() -> void:
+	if not can_move:
+		return
 	# 检测跳跃输入
 	if Input.is_action_just_pressed("jump"):
 		# 设置跳跃缓冲
@@ -281,6 +283,10 @@ func handle_jump_input() -> void:
 		#print("跳跃缓冲执行")
 
 func handle_movement_input() -> void:
+	if not can_move:
+		velocity.x=0
+		return
+		
 	var input_vector := get_movement_input()
 	
 	# 坐下状态下不能移动
@@ -321,6 +327,8 @@ func update_character_direction(direction: float) -> void:
 		anim.flip_h = true
 
 func handle_dash_input() -> void:
+	if not can_move:
+		return
 	if Input.is_action_just_pressed("dash") and can_dash:
 		change_state(PlayerState.DASH)
 
@@ -444,3 +452,14 @@ func get_dash_animation(direction: Vector2) -> String:
 
 func _on_dash_timer_timeout() -> void:
 	can_dash = true
+
+func freeze_movement():
+	can_move=false
+	change_state(PlayerState.IDLE)
+	if previous_state!=PlayerState.IDLE:
+		anim.stop()
+		anim.play("idle")
+	velocity=Vector2.ZERO
+
+func unfreeze_movement():
+	can_move=true

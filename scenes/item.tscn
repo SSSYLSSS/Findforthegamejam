@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dc6vk73pyu4bw"]
+[gd_scene load_steps=27 format=3 uid="uid://dc6vk73pyu4bw"]
 
 [ext_resource type="Script" uid="uid://ddwhbyp306a4m" path="res://scripts/item/negative_item.gd" id="1_s8enn"]
+[ext_resource type="Texture2D" uid="uid://bsdo8paeru86" path="res://assets/canvas/Others/Forceinoutbreaksheet.png" id="2_6muww"]
 [ext_resource type="Texture2D" uid="uid://dk42tupjffil5" path="res://assets/canvas/Others/items.png" id="2_s8enn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6muww"]
@@ -33,6 +34,34 @@ region = Rect2(80, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_xr48l"]
 atlas = ExtResource("2_s8enn")
 region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox7tp"]
+atlas = ExtResource("2_6muww")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b0vj"]
+atlas = ExtResource("2_6muww")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq5q0"]
+atlas = ExtResource("2_6muww")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkinn"]
+atlas = ExtResource("2_6muww")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ks6"]
+atlas = ExtResource("2_6muww")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxgow"]
+atlas = ExtResource("2_6muww")
+region = Rect2(320, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf8yr"]
+atlas = ExtResource("2_6muww")
+region = Rect2(384, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34t5m"]
 atlas = ExtResource("2_s8enn")
@@ -89,6 +118,32 @@ animations = [{
 "loop": true,
 "name": &"down",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox7tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b0vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq5q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkinn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ks6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxgow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf8yr")
+}],
+"loop": true,
+"name": &"negativebreak",
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -162,8 +217,7 @@ shape = SubResource("CircleShape2D_6muww")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ox7tp")
-animation = &"up"
+animation = &"negativebreak"
 autoplay = "up"
-frame_progress = 0.61829114
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

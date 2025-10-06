@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://880vcyhd3dy3"]
+
+[ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_2i2f5"]
+[ext_resource type="PackedScene" uid="uid://csgbnhort1grd" path="res://scenes/item/positive_item.tscn" id="2_65gd8"]
+[ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="3_65gd8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1jrd"]
+size = Vector2(246, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(59, 121)
+shape = SubResource("RectangleShape2D_t1jrd")
+
+[node name="Player" parent="." instance=ExtResource("1_2i2f5")]
+
+[node name="PositiveItem" parent="." instance=ExtResource("2_65gd8")]
+position = Vector2(28, 83)
+
+[node name="Force_core" type="Node2D" parent="."]
+position = Vector2(104, 78)
+
+[node name="force_core2" parent="Force_core" instance=ExtResource("3_65gd8")]
+
+[node name="force_core" parent="Force_core" instance=ExtResource("3_65gd8")]

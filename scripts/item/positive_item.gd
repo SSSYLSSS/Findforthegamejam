@@ -35,4 +35,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	#发送信号
 	if body.name == "Player":
+		anim.play("positivebreak")
+		SoundManager.play_sfx("Breaksound")
 		positive_hit.emit()

@@ -177,3 +177,6 @@ position = Vector2(288, -16)
 
 [node name="PositiveItem" parent="Items" instance=ExtResource("7_qb3jo")]
 position = Vector2(8, -8)
+
+[node name="PositiveItem2" parent="Items" instance=ExtResource("7_qb3jo")]
+position = Vector2(-55, -11)

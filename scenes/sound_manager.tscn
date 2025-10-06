@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmet5a2x3t1yx"]
+[gd_scene load_steps=13 format=3 uid="uid://dmet5a2x3t1yx"]
 
 [ext_resource type="Script" uid="uid://4earhug0urto" path="res://scripts/sound_manager.gd" id="1_5lwbd"]
 [ext_resource type="AudioStream" uid="uid://dxii44u81wyjf" path="res://assets/sounds/SFX/dash.wav" id="1_shlr6"]
@@ -6,8 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://dp4bdfbnqka4i" path="res://assets/sounds/SFX/OUTForce.wav" id="3_ro3ww"]
 [ext_resource type="AudioStream" uid="uid://cevb6aay3ccax" path="res://assets/sounds/SFX/UIPress.wav" id="5_v1pt3"]
 [ext_resource type="AudioStream" uid="uid://dwo4efa38bx3x" path="res://assets/sounds/SFX/UIin.wav" id="6_mpi5b"]
+[ext_resource type="AudioStream" uid="uid://bvyqidhkffc3r" path="res://assets/sounds/SFX/transmusic.wav" id="7_55or6"]
 [ext_resource type="AudioStream" uid="uid://chgks3ctdingd" path="res://assets/sounds/BGM/Intro2Flat.wav" id="7_aa63w"]
 [ext_resource type="AudioStream" uid="uid://x8y4i7j60rq6" path="res://assets/sounds/BGM/Intro1.wav" id="7_k1d7a"]
+[ext_resource type="AudioStream" uid="uid://0s7qo5i4oc45" path="res://assets/sounds/SFX/death.wav" id="8_74mgu"]
 [ext_resource type="AudioStream" uid="uid://dnlt4lvauy7c2" path="res://assets/sounds/BGM/OpeningMusic.wav" id="8_k1d7a"]
 [ext_resource type="AudioStream" uid="uid://dfe6skg56vthm" path="res://assets/sounds/BGM/Beginning.wav" id="10_gb18h"]
 
@@ -36,6 +38,12 @@ bus = &"SFX"
 [node name="UIin" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("6_mpi5b")
 bus = &"SFX"
+
+[node name="Transmusic" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_55or6")
+
+[node name="Death" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("8_74mgu")
 
 [node name="BGM" type="Node" parent="."]
 

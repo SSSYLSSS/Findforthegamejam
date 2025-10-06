@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 
 var is_positive: bool = true

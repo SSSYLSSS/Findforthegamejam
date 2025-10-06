@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://gxhpxsi4d07j" path="res://scripts/UI/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_yqeox"]
-[ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/storys/beginning.tscn" id="2_4ytvr"]
+[ext_resource type="PackedScene" uid="uid://bt23ejdebo3ik" path="res://scenes/chapter/chapter_0.tscn" id="2_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="4_4ytvr"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnvy"]
 size = Vector2(177, 48)

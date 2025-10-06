@@ -1,11 +1,12 @@
 [gd_scene load_steps=17 format=3 uid="uid://ba6u3w4jkqvmd"]
 
-[ext_resource type="Script" uid="uid://bgxg1x78uegd3" path="res://scripts/force_core.gd" id="1_kfe77"]
+[ext_resource type="Script" uid="uid://bgxg1x78uegd3" path="res://scripts/item/force_core.gd" id="1_kfe77"]
 [ext_resource type="Shader" uid="uid://ch5nbl6qkjtm3" path="res://assets/shaders/force_core.gdshader" id="2_ccmp6"]
-[ext_resource type="Texture2D" uid="uid://j43tug0vbxq2" path="res://assets/canvas/force_core-Sheet.png" id="2_k3qlo"]
+[ext_resource type="Texture2D" uid="uid://j43tug0vbxq2" path="res://assets/canvas/Others/force_core-Sheet.png" id="2_k3qlo"]
 [ext_resource type="Texture2D" uid="uid://b0kjnf7814erq" path="res://assets/canvas/UV/uvtest2.png" id="3_ccmp6"]
-[ext_resource type="Script" path="res://scenes/cpu_particles_2d.gd" id="5_jrv5s"]
-[ext_resource type="Script" path="res://scenes/rotateforcore.gd" id="5_ndy2h"]
+[ext_resource type="Script" uid="uid://gldw7nnj23po" path="res://scenes/core/cpu_particles_2d.gd" id="5_jrv5s"]
+[ext_resource type="Script" uid="uid://mmlm5xdkm836" path="res://scenes/core/rotateforcore.gd" id="5_ndy2h"]
+
 
 
 [sub_resource type="Gradient" id="Gradient_jrv5s"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://csgbnhort1grd"]
+[gd_scene load_steps=13 format=3 uid="uid://csgbnhort1grd"]
 
 [ext_resource type="Script" uid="uid://dx3f6arm2k66r" path="res://scripts/item/positive_item.gd" id="1_g5d6e"]
 [ext_resource type="Texture2D" uid="uid://dk42tupjffil5" path="res://assets/canvas/Others/items.png" id="2_bfaq3"]
@@ -99,6 +99,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_x7q5b"]
 radius = 5.0
 
+[sub_resource type="Environment" id="Environment_g5d6e"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.39
+glow_strength = 1.33
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 2.09
+
 [node name="PositiveItem" type="Area2D"]
 script = ExtResource("1_g5d6e")
 
@@ -110,3 +119,6 @@ frame_progress = 0.44339898
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_x7q5b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g5d6e")

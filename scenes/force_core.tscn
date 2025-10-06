@@ -7,8 +7,6 @@
 [ext_resource type="Script" uid="uid://gldw7nnj23po" path="res://scenes/core/cpu_particles_2d.gd" id="5_jrv5s"]
 [ext_resource type="Script" uid="uid://mmlm5xdkm836" path="res://scenes/core/rotateforcore.gd" id="5_ndy2h"]
 
-
-
 [sub_resource type="Gradient" id="Gradient_jrv5s"]
 offsets = PackedFloat32Array(0, 0.20869565, 0.26956522, 0.39130434, 0.5304348, 0.65217394, 0.6869565)
 colors = PackedColorArray(0, 0, 0, 0, 0.36749566, 0.08397951, 0.40282607, 0.5185185, 0.70874166, 0.16196048, 0.7768789, 1, 0.49411765, 0.47843137, 0.9098039, 1, 0.58247226, 0.3640022, 0.86870563, 0.9019608, 0.22388896, 0.16394597, 0.45784688, 0.5999999, 1, 1, 1, 0)

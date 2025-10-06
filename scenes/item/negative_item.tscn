@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bt3n6rdax31rf"]
+[gd_scene load_steps=20 format=3 uid="uid://bt3n6rdax31rf"]
 
 [ext_resource type="Script" uid="uid://ddwhbyp306a4m" path="res://scripts/item/negative_item.gd" id="1_s8enn"]
 [ext_resource type="Texture2D" uid="uid://dk42tupjffil5" path="res://assets/canvas/Others/items.png" id="2_s8enn"]
@@ -153,6 +153,15 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Environment" id="Environment_4pl8r"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.39
+glow_strength = 1.33
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 2.09
+
 [node name="NegativeItem" type="Area2D"]
 script = ExtResource("1_s8enn")
 
@@ -164,5 +173,8 @@ sprite_frames = SubResource("SpriteFrames_ox7tp")
 animation = &"up"
 autoplay = "up"
 frame_progress = 0.61829114
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4pl8r")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

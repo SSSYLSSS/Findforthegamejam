@@ -8,11 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://de5ua6mc7lko2" path="res://scenes/item/trap.tscn" id="6_n0w3g"]
 [ext_resource type="Resource" uid="uid://b5ucvj7gekvxr" path="res://assets/spwan/chapter_1.tres" id="7_hvi31"]
 [ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/core/death_zone.tscn" id="8_bvi51"]
-[ext_resource type="Script" uid="uid://be4onq2myvvbv" path="res://scripts/exit/chapter_1.gd" id="9_fky2m"]
-[ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="10_n2dtb"]
 [ext_resource type="PackedScene" uid="uid://bt3n6rdax31rf" path="res://scenes/item/negative_item.tscn" id="11_fcijm"]
 [ext_resource type="PackedScene" uid="uid://csgbnhort1grd" path="res://scenes/item/positive_item.tscn" id="12_bdl8p"]
+[ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="12_hy6dd"]
 [ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="13_8id66"]
+[ext_resource type="Resource" uid="uid://qy8x555tlp44" path="res://assets/scene/chapter_1.tres" id="13_ntr0d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
 atlas = ExtResource("3_ayc5h")
@@ -184,12 +184,11 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_choun"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_85g3d"]
-a = Vector2(5, -126)
-b = Vector2(5, 19)
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_trceg"]
 b = Vector2(0, 97)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ntr0d"]
+b = Vector2(0, 96)
 
 [node name="Chapter1" type="Node"]
 script = ExtResource("1_mqmwm")
@@ -256,15 +255,6 @@ spawn_point = ExtResource("7_hvi31")
 position = Vector2(85, 287)
 shape = SubResource("WorldBoundaryShape2D_choun")
 
-[node name="ExitArea" type="Area2D" parent="."]
-position = Vector2(-1395, -243)
-script = ExtResource("9_fky2m")
-next_scene = ExtResource("10_n2dtb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
-position = Vector2(1388, 140)
-shape = SubResource("SegmentShape2D_85g3d")
-
 [node name="Items" type="Node2D" parent="."]
 
 [node name="NegativeItem" parent="Items" instance=ExtResource("11_fcijm")]
@@ -285,5 +275,11 @@ position = Vector2(-275, -206)
 position = Vector2(-31, -208)
 shape = SubResource("SegmentShape2D_trceg")
 
+[node name="ExitArea" parent="." instance=ExtResource("12_hy6dd")]
+scene = ExtResource("13_ntr0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+position = Vector2(0, -208)
+shape = SubResource("SegmentShape2D_ntr0d")
+
 [connection signal="death" from="Trap/Trap" to="." method="_on_trap_death"]
-[connection signal="body_entered" from="ExitArea" to="ExitArea" method="_on_body_entered"]

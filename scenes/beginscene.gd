@@ -12,11 +12,9 @@ func _ready() -> void:
 	text_box.visible=false
 	await get_tree().create_timer(2.0).timeout
 	feeling_system()
-	
-	
 
 func _process(delta: float) -> void:
-	Input
+	pass
 
 func feeling_system():
 	text_box.visible=true

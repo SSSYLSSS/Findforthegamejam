@@ -39,3 +39,10 @@ func feeling_system():
 	emoji.play("confusing")
 	await get_tree().create_timer(1.0).timeout
 	emoji.visible=false
+
+
+func _on_trap_death() -> void:
+	emoji.play("died")
+	emoji.visible=true
+	await get_tree().create_timer(1.5).timeout
+	emoji.visible=false

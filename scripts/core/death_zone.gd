@@ -8,6 +8,7 @@ var player : CharacterBody2D
 func _on_body_entered(body: Node2D) -> void:
 	if body.name=="Player":
 		player=body
+		SoundManager.play_sfx("Death")
 		timer.start()
 	
 func _on_timer_timeout() -> void:

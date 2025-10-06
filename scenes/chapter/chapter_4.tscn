@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_77p1g"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_82gyo"]
+[ext_resource type="PackedScene" uid="uid://csgbnhort1grd" path="res://scenes/item/positive_item.tscn" id="4_77p1g"]
+[ext_resource type="PackedScene" uid="uid://bt3n6rdax31rf" path="res://scenes/item/negative_item.tscn" id="5_82gyo"]
 [ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="5_ekfge"]
-[ext_resource type="PackedScene" uid="uid://bs2lds5a8w5vu" path="res://scenes/negative_item.tscn" id="6_7uy5y"]
-[ext_resource type="PackedScene" uid="uid://cwny7nc0ig3jc" path="res://scenes/positive_item.tscn" id="7_qb3jo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f588h"]
 texture = ExtResource("1_77p1g")
@@ -172,8 +172,8 @@ position = Vector2(320, -24)
 
 [node name="Items" type="Node2D" parent="."]
 
-[node name="NegativeItem" parent="Items" instance=ExtResource("6_7uy5y")]
-position = Vector2(288, -16)
+[node name="PositiveItem" parent="Items" instance=ExtResource("4_77p1g")]
+position = Vector2(0, -16)
 
-[node name="PositiveItem" parent="Items" instance=ExtResource("7_qb3jo")]
-position = Vector2(8, -8)
+[node name="NegativeItem" parent="Items" instance=ExtResource("5_82gyo")]
+position = Vector2(296, -8)

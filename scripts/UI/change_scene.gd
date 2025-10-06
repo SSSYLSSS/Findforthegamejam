@@ -8,6 +8,7 @@ func _ready() -> void:
 func change_scene(target_scene:PackedScene)->void:
 	if target_scene==null:
 		return
+	SoundManager.play_sfx("Transmusic")
 	self.visible=true
 	anim.play("trans_in")
 	await anim.animation_finished

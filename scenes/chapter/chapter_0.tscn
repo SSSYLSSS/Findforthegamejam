@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bt23ejdebo3ik"]
+[gd_scene load_steps=25 format=3 uid="uid://bt23ejdebo3ik"]
 
 [ext_resource type="Script" uid="uid://nd68ul7yx4to" path="res://scripts/story/begging.gd" id="1_d8e8j"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="2_mveoo"]
@@ -6,6 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://ck87bghdnh0kk" path="res://assets/emoji/emoji.png" id="3_mveoo"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="5_2x8kr"]
 [ext_resource type="Texture2D" uid="uid://bqigato7o5r85" path="res://assets/canvas/Others/bedroomAnimation-Sheet.png" id="6_vqrml"]
+
+[sub_resource type="Environment" id="Environment_qu43s"]
+background_mode = 3
+background_energy_multiplier = 11.95
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.0
+glow_strength = 2.0
+glow_bloom = 0.01
+glow_blend_mode = 1
+glow_hdr_threshold = 1.5
+glow_hdr_scale = 0.65
+glow_hdr_luminance_cap = 14.6
+glow_map_strength = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mveoo"]
 atlas = ExtResource("3_mveoo")
@@ -324,6 +338,9 @@ ending_pos = Vector2(112, 93)
 next_scene = ExtResource("2_xj3lg")
 metadata/_edit_horizontal_guides_ = [133.0]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qu43s")
+
 [node name="Click" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -332,6 +349,7 @@ offset_right = 320.0
 offset_bottom = 181.0
 
 [node name="Player" type="Sprite2D" parent="."]
+modulate = Color(0.65012825, 0.6501283, 0.65012825, 1)
 position = Vector2(55, 71)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_mveoo")

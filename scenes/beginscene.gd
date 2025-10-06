@@ -1,5 +1,6 @@
 extends Node
 
+@onready var player: CharacterBody2D = $Player
 @onready var emoji: AnimatedSprite2D = $Player/Emoji
 @onready var text: Panel = $Player/Text
 @onready var text_box: Label = $Player/Text/TextBox
@@ -19,6 +20,7 @@ func _process(delta: float) -> void:
 	pass
 
 func feeling_system():
+	player.freeze_movement()
 	text_box.visible=true
 	text_box.text="陌生的天花板"
 	text.visible=true
@@ -41,6 +43,7 @@ func feeling_system():
 	emoji.play("confusing")
 	await get_tree().create_timer(1.0).timeout
 	emoji.visible=false
+	player.unfreeze_movement()
 
 
 func _on_trap_death() -> void:
@@ -48,10 +51,3 @@ func _on_trap_death() -> void:
 	emoji.visible=true
 	await get_tree().create_timer(1.5).timeout
 	emoji.visible=false
-
-
-func _on_exit_area_body_entered(body: Node2D) -> void:
-	if body.name=="Player":
-		var player:CharacterBody2D=body
-		player.velocity=Vector2.ZERO
-		LoadScene.change_scene(next_scene)

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ddwhbyp306a4m" path="res://scripts/item/negative_item.gd" id="1_s8enn"]
 [ext_resource type="Texture2D" uid="uid://dk42tupjffil5" path="res://assets/canvas/Others/items.png" id="2_s8enn"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_6muww"]
 radius = 6.0
 
@@ -154,11 +153,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Item" type="Area2D"]
+[node name="NegativeItem" type="Area2D"]
 script = ExtResource("1_s8enn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_6muww")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

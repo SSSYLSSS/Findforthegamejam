@@ -9,6 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
 		SoundManager.play_sfx("Death")
+		player.freeze_movement()
 		timer.start()
 		death.emit()
 
@@ -17,6 +18,7 @@ func _on_timer_timeout() -> void:
 	
 	# 重置所有物品
 	reset_all_items()
+	player.unfreeze_movement()
 
 # 添加重置所有物品的函数
 func reset_all_items():

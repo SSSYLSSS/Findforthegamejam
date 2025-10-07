@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://3blvhiwj64wr"]
+[gd_scene load_steps=17 format=4 uid="uid://3blvhiwj64wr"]
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_u0756"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_3jfde"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bt3n6rdax31rf" path="res://scenes/item/negative_item.tscn" id="7_3xo80"]
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="8_3xo80"]
 [ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/core/death_zone.tscn" id="9_xp84e"]
+[ext_resource type="Resource" uid="uid://c6h3l576tbl8n" path="res://assets/scene/chapter_4.tres" id="10_qrn4d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xo80"]
 texture = ExtResource("1_u0756")
@@ -143,7 +144,6 @@ b = Vector2(0, 48)
 b = Vector2(0, 48)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cyq8n"]
-
 
 [node name="Chapter_3" type="Node2D"]
 
@@ -370,6 +370,7 @@ position = Vector2(744, 104)
 
 [node name="ExitArea" parent="." instance=ExtResource("8_3xo80")]
 position = Vector2(1280, 48)
+scene = ExtResource("10_qrn4d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
 shape = SubResource("SegmentShape2D_xp84e")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb2y06a43jfa5"]
+[gd_scene load_steps=6 format=3 uid="uid://brcfmb1u5atqp"]
 
-[ext_resource type="Script" uid="uid://cidfjhe706mxl" path="res://scripts/interlude/interlude_2.gd" id="1_ui8ws"]
-[ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="2_pev38"]
-[ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="3_rdoaq"]
+[ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_67h4c"]
+[ext_resource type="Script" uid="uid://bvk01rdu3r1ev" path="res://scripts/interlude/interlude_4.gd" id="1_xc2qs"]
 
-[sub_resource type="Animation" id="Animation_ss2em"]
+[sub_resource type="Animation" id="Animation_xc2qs"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -16,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["向上走吧...?"]
+"values": ["哎...他还是那么..."]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -31,7 +30,7 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_p1su7"]
+[sub_resource type="Animation" id="Animation_67h4c"]
 resource_name = "default"
 length = 3.0
 tracks/0/type = "value"
@@ -41,10 +40,10 @@ tracks/0/path = NodePath("Label:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["向上走吧...?", "似乎有光...?"]
+"values": ["向上走吧..."]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -54,26 +53,25 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(2.5, 1, 1, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w88ws"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xc2qs"]
 _data = {
-&"RESET": SubResource("Animation_ss2em"),
-&"default": SubResource("Animation_p1su7")
+&"RESET": SubResource("Animation_xc2qs"),
+&"default": SubResource("Animation_67h4c")
 }
 
-[node name="Interlude_2" type="Control"]
+[node name="Interlude_4" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ui8ws")
-next_scene = ExtResource("2_pev38")
+script = ExtResource("1_xc2qs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -98,15 +96,15 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_rdoaq")
+theme_override_fonts/font = ExtResource("1_67h4c")
 theme_override_font_sizes/font_size = 28
-text = "向上走吧...?"
+text = "哎...他还是那么..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_w88ws")
+&"": SubResource("AnimationLibrary_xc2qs")
 }
 
 [node name="Control" type="Control" parent="."]

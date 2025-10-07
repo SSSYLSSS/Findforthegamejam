@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nd68ul7yx4to" path="res://scripts/story/begging.gd" id="1_d8e8j"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="2_mveoo"]
-[ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/chapter/chapter_1.tscn" id="2_xj3lg"]
+[ext_resource type="PackedScene" uid="uid://cjpem23c0un7t" path="res://scenes/interlude/interlude_1.tscn" id="2_qu43s"]
 [ext_resource type="Texture2D" uid="uid://ck87bghdnh0kk" path="res://assets/emoji/emoji.png" id="3_mveoo"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="5_2x8kr"]
 [ext_resource type="Texture2D" uid="uid://bqigato7o5r85" path="res://assets/canvas/Others/bedroomAnimation-Sheet.png" id="6_vqrml"]
@@ -53,7 +53,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:region_rect")
+tracks/0/path = NodePath("PlayerSprite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -65,7 +65,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:hframes")
+tracks/1/path = NodePath("PlayerSprite:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -77,7 +77,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Player:frame")
+tracks/2/path = NodePath("PlayerSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -89,7 +89,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Player:flip_h")
+tracks/3/path = NodePath("PlayerSprite:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -101,7 +101,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Player:position")
+tracks/4/path = NodePath("PlayerSprite:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -117,7 +117,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:region_rect")
+tracks/0/path = NodePath("PlayerSprite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -129,7 +129,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:hframes")
+tracks/1/path = NodePath("PlayerSprite:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -141,7 +141,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Player:flip_h")
+tracks/2/path = NodePath("PlayerSprite:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -153,7 +153,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Player:position")
+tracks/3/path = NodePath("PlayerSprite:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -165,7 +165,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Player:frame")
+tracks/4/path = NodePath("PlayerSprite:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -183,7 +183,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:region_rect")
+tracks/0/path = NodePath("PlayerSprite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -195,7 +195,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:hframes")
+tracks/1/path = NodePath("PlayerSprite:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -207,7 +207,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Player:frame")
+tracks/2/path = NodePath("PlayerSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -225,7 +225,7 @@ step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:region_rect")
+tracks/0/path = NodePath("PlayerSprite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -237,7 +237,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:hframes")
+tracks/1/path = NodePath("PlayerSprite:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -249,7 +249,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Player:frame")
+tracks/2/path = NodePath("PlayerSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -331,24 +331,31 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Beginning" type="Node2D"]
+[node name="Beginning" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_d8e8j")
 beginning_pos = Vector2(300, 93)
 ending_pos = Vector2(112, 93)
-next_scene = ExtResource("2_xj3lg")
+next_scene = ExtResource("2_qu43s")
 metadata/_edit_horizontal_guides_ = [133.0]
+
+[node name="Click" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qu43s")
 
-[node name="Click" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 2.0
-offset_right = 320.0
-offset_bottom = 181.0
-
-[node name="Player" type="Sprite2D" parent="."]
+[node name="PlayerSprite" type="Sprite2D" parent="."]
 modulate = Color(0.65012825, 0.6501283, 0.65012825, 1)
 position = Vector2(55, 71)
 scale = Vector2(2.4, 2.4)
@@ -358,21 +365,21 @@ hframes = 4
 region_enabled = true
 region_rect = Rect2(0, 32, 128, 32)
 
-[node name="Emoji" type="AnimatedSprite2D" parent="Player"]
+[node name="Emoji" type="AnimatedSprite2D" parent="PlayerSprite"]
 visible = false
 position = Vector2(-0.40001756, -3.2000003)
 scale = Vector2(0.39999998, 0.39999998)
 sprite_frames = SubResource("SpriteFrames_yvypu")
 animation = &"comfortable"
 
-[node name="Text" type="Panel" parent="Player"]
+[node name="Text" type="Panel" parent="PlayerSprite"]
 offset_left = -15.999996
 offset_top = -9.5999975
 offset_right = 120.0
 offset_bottom = 22.399994
 scale = Vector2(0.25, 0.25)
 
-[node name="TextBox" type="Label" parent="Player/Text"]
+[node name="TextBox" type="Label" parent="PlayerSprite/Text"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -400,7 +407,7 @@ one_shot = true
 
 [node name="Background" type="AnimatedSprite2D" parent="."]
 z_index = -10
-position = Vector2(161, 91)
+position = Vector2(160, 90)
 sprite_frames = SubResource("SpriteFrames_fsniw")
 autoplay = "default"
 

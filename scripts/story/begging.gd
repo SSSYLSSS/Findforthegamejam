@@ -1,16 +1,16 @@
-extends Node2D
+extends Control
 
 @export var beginning_pos:Vector2
 @export var ending_pos:Vector2
 @export var next_scene:PackedScene
 
-@onready var player: Sprite2D = $Player
+@onready var player: Sprite2D = $PlayerSprite
 @onready var anim: AnimationPlayer = $AnimationPlayer
-@onready var emoji: AnimatedSprite2D = $Player/Emoji
+@onready var emoji: AnimatedSprite2D = $PlayerSprite/Emoji
 @onready var emoji_timer: Timer = $EmojiTimer
 @onready var click: Control = $Click
-@onready var text: Panel = $Player/Text
-@onready var text_box: Label = $Player/Text/TextBox
+@onready var text: Panel = $PlayerSprite/Text
+@onready var text_box: Label = $PlayerSprite/Text/TextBox
 @onready var click_timer: Timer = $ClickTimer
 
 var can_be_preesed:=false
@@ -73,7 +73,7 @@ func _on_click_gui_input(event: InputEvent) -> void:
 			play_bed_animation()
 			can_be_preesed=true
 			click_timer.start()
-		else:
+		elif can_be_preesed:
 			if click_timer.time_left>0:
 				return
 			LoadScene.change_scene(next_scene)

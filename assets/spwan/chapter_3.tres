@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_ijckg")
-spawn_point = Vector2(-16, -8)
+spawn_point = Vector2(0, -8)
 metadata/_custom_type_script = "uid://36utgay0ra"

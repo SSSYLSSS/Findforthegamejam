@@ -333,7 +333,12 @@ func handle_dash_input() -> void:
 		change_state(PlayerState.DASH)
 
 func start_dash() -> void:
+	CameraShakeForAll.shake_camera(2)
 	SoundManager.play_sfx("Dash")
+	
+
+	
+	
 	# 获取八方向输入
 	var input_vector := get_movement_input()
 	
@@ -356,8 +361,13 @@ func start_dash() -> void:
 		dash_timer.start()
 	can_dash = false
 	
+	Engine.time_scale = 0.01
+	await get_tree().create_timer(0.05, true, false, true).timeout
+	Engine.time_scale = 1
 	# 创建残影效果
 	create_dash_trails()
+	
+	
 
 func create_dash_trails() -> void:
 	# 使用协程创建连续的残影

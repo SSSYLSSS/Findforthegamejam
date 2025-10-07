@@ -34,15 +34,25 @@ func stop_sfx(name: String) -> void:
 func setup_ui_sounds(node: Node) -> void:
 	var button := node as Button
 	if button: 
-		button.pressed.connect(play_sfx.bind("UIPress"))
-		button.focus_entered.connect(play_sfx.bind("UIin"))
-		button.mouse_entered.connect(button.grab_focus)
+		# 连接前先检查是否已连接，避免重复连接
+		if not button.pressed.is_connected(play_sfx.bind("UIPress")):
+			button.pressed.connect(play_sfx.bind("UIPress"))
+		if not button.focus_entered.is_connected(play_sfx.bind("UIin")):
+			button.focus_entered.connect(play_sfx.bind("UIin"))
+		if not button.mouse_entered.is_connected(button.grab_focus):
+			button.mouse_entered.connect(button.grab_focus)
 	
 	var slider := node as Slider
 	if slider: 
-		slider.value_changed.connect(play_sfx.bind("UIPress").unbind(1))
-		slider.focus_entered.connect(play_sfx.bind("UIin"))
-		slider.mouse_entered.connect(slider.grab_focus)
+		# 修复信号连接并添加重复检查
+		var sfx_bind = play_sfx.bind("UIPress").unbind(1)
+		if not slider.value_changed.is_connected(sfx_bind):
+			slider.value_changed.connect(sfx_bind)
+		if not slider.focus_entered.is_connected(play_sfx.bind("UIin")):
+			slider.focus_entered.connect(play_sfx.bind("UIin"))
+		if not slider.mouse_entered.is_connected(slider.grab_focus):
+			slider.mouse_entered.connect(slider.grab_focus)
+	
 	
 	for child in node.get_children():
 		setup_ui_sounds(child)

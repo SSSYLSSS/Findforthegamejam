@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NextScene" load_steps=3 format=3 uid="uid://c6h3l576tbl8n"]
 
-[ext_resource type="PackedScene" uid="uid://brcfmb1u5atqp" path="res://scenes/interlude/interlude_4.tscn" id="1_g38qj"]
+[ext_resource type="PackedScene" uid="uid://s6l74wt3wfat" path="res://scenes/interlude/interlude_5.tscn" id="1_g38qj"]
 [ext_resource type="Script" uid="uid://d3eylou6fmh27" path="res://scripts/core/next_scene.gd" id="1_hijo5"]
 
 [resource]

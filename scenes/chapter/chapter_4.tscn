@@ -242,6 +242,7 @@ position = Vector2(-40, -64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource("SegmentShape2D_i167n")
+
 [node name="Bubble1" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(242, -143)

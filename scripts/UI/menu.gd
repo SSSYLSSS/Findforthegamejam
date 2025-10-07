@@ -7,9 +7,13 @@ extends Control
 
 @export var next_scene: PackedScene
 
+@export var setting_scene: PackedScene
+@onready var setting: Control = $Setting
+
+
 func _ready() -> void:
-	for button: Button in $VBoxContainer.get_children():
-		button.mouse_entered.connect(button.grab_focus)
+	#for button: Button in $VBoxContainer.get_children():
+		#button.mouse_entered.connect(button.grab_focus)
 	SoundManager.play_bgm("OpeningMusic")
 	SoundManager.setup_ui_sounds(self)
 	
@@ -24,6 +28,7 @@ func _on_start_button_pressed() -> void:
 	#get_tree().change_scene_to_packed(MainScene)
 
 func _on_setting_button_pressed() -> void:
+	setting.show_setting()
 	pass # Replace with function body.
 
 func _on_exit_button_pressed() -> void:

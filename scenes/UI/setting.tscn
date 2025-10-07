@@ -1,0 +1,175 @@
+[gd_scene load_steps=17 format=3 uid="uid://1irxdbgkp53j"]
+
+[ext_resource type="Script" uid="uid://c3ck0x4kri2nk" path="res://scenes/UI/setting.gd" id="1_0hs7h"]
+[ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_5qkre"]
+[ext_resource type="PackedScene" uid="uid://bsiqbubq38ts2" path="res://scenes/core/volume_slider.tscn" id="2_ommh5"]
+[ext_resource type="Texture2D" uid="uid://yq3aaayvl11d" path="res://assets/canvas/Others/maybeaicon.png" id="3_amuop"]
+[ext_resource type="Texture2D" uid="uid://caqqoecfc588h" path="res://assets/canvas/Others/maybeaicon3.png" id="4_0hs7h"]
+[ext_resource type="Texture2D" uid="uid://hati700nrxjq" path="res://assets/canvas/Others/maybeaicon2.png" id="5_ujs5j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8rbb"]
+texture = ExtResource("3_amuop")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qh0e8"]
+texture = ExtResource("4_0hs7h")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjpjq"]
+texture = ExtResource("5_ujs5j")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6ih1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o44d8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_amuop"]
+texture = ExtResource("3_amuop")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hs7h"]
+texture = ExtResource("4_0hs7h")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujs5j"]
+texture = ExtResource("5_ujs5j")
+texture_margin_left = 60.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d8rbb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh0e8"]
+
+[node name="Setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0hs7h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.1326, 0.10650001, 0.15, 0.90588236)
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -78.0
+offset_right = 175.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+
+[node name="Label" type="Label" parent="V"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+text = "设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioSettings" type="PanelContainer" parent="V"]
+layout_mode = 2
+
+[node name="G" type="GridContainer" parent="V/AudioSettings"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="Label" type="Label" parent="V/AudioSettings/G"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+text = "主音量"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VolumeSlider" parent="V/AudioSettings/G" instance=ExtResource("2_ommh5")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="V/AudioSettings/G"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+text = "音   效"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VolumeSlider2" parent="V/AudioSettings/G" instance=ExtResource("2_ommh5")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bus = &"SFX"
+
+[node name="Label3" type="Label" parent="V/AudioSettings/G"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+text = "音   乐"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VolumeSlider3" parent="V/AudioSettings/G" instance=ExtResource("2_ommh5")]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bus = &"BGM"
+
+[node name="Actions" type="PanelContainer" parent="V"]
+layout_mode = 2
+
+[node name="H" type="HBoxContainer" parent="V/Actions"]
+layout_mode = 2
+alignment = 1
+
+[node name="Resume" type="Button" parent="V/Actions/H"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+theme_override_styles/normal = SubResource("StyleBoxTexture_d8rbb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qh0e8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kjpjq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p6ih1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o44d8")
+text = "返回菜单"
+
+[node name="Quit" type="Button" parent="V/Actions/H"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5qkre")
+theme_override_styles/normal = SubResource("StyleBoxTexture_amuop")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0hs7h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ujs5j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d8rbb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qh0e8")
+text = "退出游戏"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="pressed" from="V/Actions/H/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="V/Actions/H/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

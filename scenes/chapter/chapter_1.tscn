@@ -219,8 +219,8 @@ glow_hdr_scale = 2.83
 
 [node name="Chapter1" type="Node2D"]
 script = ExtResource("1_mqmwm")
-metadata/_edit_horizontal_guides_ = [180.0, -774.0]
-metadata/_edit_vertical_guides_ = [1056.0, -15.0]
+metadata/_edit_horizontal_guides_ = [180.0, -774.0, -283.0]
+metadata/_edit_vertical_guides_ = [1056.0, -15.0, 708.0]
 
 [node name="Player" parent="." instance=ExtResource("2_4mo47")]
 position = Vector2(333, -76)
@@ -228,8 +228,8 @@ position = Vector2(333, -76)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_callback = 0
 limit_left = -15
-limit_top = -774
-limit_right = 1055
+limit_top = -283
+limit_right = 707
 limit_bottom = 190
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true

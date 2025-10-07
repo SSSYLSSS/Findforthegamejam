@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bijd2txcttbkp"]
+[gd_scene load_steps=21 format=4 uid="uid://bijd2txcttbkp"]
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_77p1g"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_82gyo"]
@@ -9,6 +9,11 @@
 [ext_resource type="Resource" uid="uid://vkdll0nhre71" path="res://assets/spwan/chapter_4.tres" id="7_7uy5y"]
 [ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="8_qb3jo"]
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="9_ekfge"]
+[ext_resource type="Texture2D" uid="uid://csgf2hqckbers" path="res://assets/canvas/front_canvas/bubbles/bubble1.png" id="10_xj05b"]
+[ext_resource type="Script" uid="uid://eybgemx7vaw1" path="res://scripts/front_move/front_move_2.gd" id="11_n0rqp"]
+[ext_resource type="Texture2D" uid="uid://b1w2l5vjds0b6" path="res://assets/canvas/front_canvas/bubbles/bubble6.png" id="12_se5dv"]
+[ext_resource type="Texture2D" uid="uid://bxsfv1cb6h3tx" path="res://assets/canvas/front_canvas/bubbles/bubble2.png" id="13_nmrjb"]
+[ext_resource type="Texture2D" uid="uid://doxc183wiphhg" path="res://assets/canvas/front_canvas/bubbles/bubble3.png" id="14_13ffy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f588h"]
 texture = ExtResource("1_77p1g")
@@ -231,3 +236,49 @@ position = Vector2(1152, -160)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_i167n")
+
+[node name="Bubble1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(242, -143)
+texture = ExtResource("10_xj05b")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble6" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(260, -129)
+texture = ExtResource("12_se5dv")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(270, -137)
+texture = ExtResource("13_nmrjb")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(791, -98)
+texture = ExtResource("13_nmrjb")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble7" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(801, -90)
+texture = ExtResource("12_se5dv")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(805, -106)
+texture = ExtResource("14_13ffy")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble5" type="Sprite2D" parent="."]
+position = Vector2(178, 111)
+texture = ExtResource("14_13ffy")
+script = ExtResource("11_n0rqp")
+
+[node name="Bubble8" type="Sprite2D" parent="."]
+position = Vector2(170, 117)
+texture = ExtResource("12_se5dv")
+script = ExtResource("11_n0rqp")

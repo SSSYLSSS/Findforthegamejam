@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bw5hpqn03832n"]
+[gd_scene load_steps=29 format=4 uid="uid://bw5hpqn03832n"]
 
 [ext_resource type="Script" uid="uid://cbhm32penort2" path="res://scripts/chapter/chapter_1.gd" id="1_fnxso"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_yvy84"]
@@ -14,6 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="11_kto45"]
 [ext_resource type="Resource" uid="uid://qxe3q5prxo27" path="res://assets/scene/chapter_2_1.tres" id="12_7024r"]
 [ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="13_1kbkq"]
+[ext_resource type="Texture2D" uid="uid://bxsfv1cb6h3tx" path="res://assets/canvas/front_canvas/bubbles/bubble2.png" id="15_ljtya"]
+[ext_resource type="Script" uid="uid://eybgemx7vaw1" path="res://scripts/front_move/front_move_2.gd" id="16_vvc0m"]
+[ext_resource type="Texture2D" uid="uid://doxc183wiphhg" path="res://assets/canvas/front_canvas/bubbles/bubble3.png" id="17_1swxo"]
+[ext_resource type="Texture2D" uid="uid://csgf2hqckbers" path="res://assets/canvas/front_canvas/bubbles/bubble1.png" id="18_o4yn4"]
+[ext_resource type="Texture2D" uid="uid://demipwgxpsdaq" path="res://assets/canvas/front_canvas/bubbles/bubble4.png" id="19_d7dm1"]
+[ext_resource type="Texture2D" uid="uid://ktt8ovrcl3ja" path="res://assets/canvas/front_canvas/bubbles/bubble5.png" id="20_ykrnm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xceyt"]
 texture = ExtResource("2_fnxso")
@@ -454,3 +460,47 @@ texture = ExtResource("13_1kbkq")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vi5x1")
+
+[node name="Bubble2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(653, 373)
+texture = ExtResource("15_ljtya")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(664, 381)
+texture = ExtResource("17_1swxo")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(228, 415)
+texture = ExtResource("18_o4yn4")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble4" type="Sprite2D" parent="."]
+position = Vector2(254, 453)
+texture = ExtResource("19_d7dm1")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble5" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(22, 82)
+texture = ExtResource("18_o4yn4")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble6" type="Sprite2D" parent="."]
+position = Vector2(36, 99)
+texture = ExtResource("17_1swxo")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble7" type="Sprite2D" parent="."]
+position = Vector2(332, 9)
+texture = ExtResource("20_ykrnm")
+script = ExtResource("16_vvc0m")
+
+[node name="Bubble8" type="Sprite2D" parent="."]
+position = Vector2(343, 27)
+texture = ExtResource("15_ljtya")
+script = ExtResource("16_vvc0m")

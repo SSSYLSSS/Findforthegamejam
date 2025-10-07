@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="NextScene" load_steps=3 format=3 uid="uid://dqqt0j3af5wbl"]
-
-[ext_resource type="Script" uid="uid://d3eylou6fmh27" path="res://scripts/core/next_scene.gd" id="1_8c8nt"]
-[ext_resource type="PackedScene" uid="uid://kqso6bwn4xx0" path="res://scenes/menu.tscn" id="1_hcp8l"]
-
-[resource]
-script = ExtResource("1_8c8nt")
-next_scene = ExtResource("1_hcp8l")
-metadata/_custom_type_script = "uid://d3eylou6fmh27"

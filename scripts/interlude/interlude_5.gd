@@ -25,4 +25,4 @@ func _ready() -> void:
 
 func _on_control_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		LoadScene.change_scene(scene.next_scene,scene.next_pos)
+		get_tree().change_scene_to_packed(load("res://scenes/menu.tscn"))

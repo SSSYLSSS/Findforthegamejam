@@ -10,7 +10,11 @@ var float_height: float = 0.004  # 浮动高度（像素）
 var float_speed: float = 0.3  # 浮动速度（每秒周期数）
 
 func _ready() -> void:
+	anim.play("default")
 	# 记录初始位置作为浮动基准
+	
+	anim.animation_finished.connect(_on_animation_finished)
+	
 	position.y = position.y  # 确保初始位置正确
 	#获取当前场景的所有ForceCore节点
 	force_core_node = get_tree().current_scene.get_node_or_null("ForceCores")
@@ -35,4 +39,16 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	#发送信号
 	if body.name == "Player":
+		print("positive_hit")
+		anim.stop()
+		anim.play("positivebreak")
+		SoundManager.play_sfx("ItemBreak")
 		positive_hit.emit()
+		# 禁用碰撞防止多次触发
+		collision.set_deferred("disabled", true)
+
+func _on_animation_finished():
+	# 检查当前播放的动画是否是"positivebreak"
+	if anim.animation == "positivebreak":
+		# 动画播放完成后删除节点
+		queue_free()

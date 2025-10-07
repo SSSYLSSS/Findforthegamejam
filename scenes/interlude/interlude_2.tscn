@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bb2y06a43jfa5"]
 
 [ext_resource type="Script" uid="uid://cidfjhe706mxl" path="res://scripts/interlude/interlude_2.gd" id="1_ui8ws"]
-[ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="2_pev38"]
+[ext_resource type="Resource" uid="uid://cmvgjn3wa3tyc" path="res://assets/scene/interlude_2.tres" id="2_rdoaq"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="3_rdoaq"]
 
 
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["向上走吧...?"]
+"values": [""]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -74,7 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ui8ws")
-next_scene = ExtResource("2_pev38")
+scene = ExtResource("2_rdoaq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -101,7 +101,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_rdoaq")
 theme_override_font_sizes/font_size = 28
-text = "向上走吧...?"
 horizontal_alignment = 1
 vertical_alignment = 1
 

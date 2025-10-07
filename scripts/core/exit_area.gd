@@ -8,7 +8,4 @@ func _on_body_entered(body: Node2D) -> void:
 		var player:CharacterBody2D=body
 		player.velocity=Vector2.ZERO
 		timer.start()
-		player.visible=false
-		player.position = scene.next_pos
-		await timer.timeout
 		LoadScene.change_scene(scene.next_scene)

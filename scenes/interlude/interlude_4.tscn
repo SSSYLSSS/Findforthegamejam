@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://brcfmb1u5atqp"]
+[gd_scene load_steps=7 format=3 uid="uid://brcfmb1u5atqp"]
 
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_67h4c"]
 [ext_resource type="Script" uid="uid://bvk01rdu3r1ev" path="res://scripts/interlude/interlude_4.gd" id="1_xc2qs"]
+[ext_resource type="Resource" uid="uid://div3orfmny8sg" path="res://assets/scene/interlude_4.tres" id="2_b04op"]
 
 
 [sub_resource type="Animation" id="Animation_xc2qs"]
@@ -73,6 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xc2qs")
+scene = ExtResource("2_b04op")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

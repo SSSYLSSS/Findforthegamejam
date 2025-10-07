@@ -283,7 +283,7 @@ glow_hdr_scale = 2.83
 script = ExtResource("1_fnxso")
 
 [node name="Player" parent="." instance=ExtResource("1_yvy84")]
-position = Vector2(584, 152)
+position = Vector2(752, 440)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 script = ExtResource("3_vi5x1")
@@ -326,7 +326,7 @@ position = Vector2(496, 400)
 position = Vector2(240, 344)
 
 [node name="force_core3" parent="ForceCores" instance=ExtResource("3_mjjcc")]
-position = Vector2(144, 208)
+position = Vector2(144, 200)
 
 [node name="force_core4" parent="ForceCores" instance=ExtResource("3_mjjcc")]
 position = Vector2(280, 144)

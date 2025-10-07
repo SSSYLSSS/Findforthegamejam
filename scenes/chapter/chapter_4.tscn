@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bijd2txcttbkp"]
+[gd_scene load_steps=22 format=4 uid="uid://bijd2txcttbkp"]
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_77p1g"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_82gyo"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://vkdll0nhre71" path="res://assets/spwan/chapter_4.tres" id="7_7uy5y"]
 [ext_resource type="Texture2D" uid="uid://bhfs6swfdah6b" path="res://assets/canvas/Others/realbackground.png" id="8_qb3jo"]
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="9_ekfge"]
+[ext_resource type="Resource" uid="uid://c6h3l576tbl8n" path="res://assets/scene/chapter_4.tres" id="10_n0rqp"]
 [ext_resource type="Texture2D" uid="uid://csgf2hqckbers" path="res://assets/canvas/front_canvas/bubbles/bubble1.png" id="10_xj05b"]
 [ext_resource type="Script" uid="uid://eybgemx7vaw1" path="res://scripts/front_move/front_move_2.gd" id="11_n0rqp"]
 [ext_resource type="Texture2D" uid="uid://b1w2l5vjds0b6" path="res://assets/canvas/front_canvas/bubbles/bubble6.png" id="12_se5dv"]
@@ -227,6 +228,7 @@ environment = SubResource("Environment_ekfge")
 
 [node name="ExitArea" parent="." instance=ExtResource("9_ekfge")]
 position = Vector2(1136, -128)
+scene = ExtResource("10_n0rqp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
 shape = SubResource("SegmentShape2D_f588h")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nd68ul7yx4to" path="res://scripts/story/begging.gd" id="1_d8e8j"]
 [ext_resource type="Texture2D" uid="uid://dt4sdxigluw3a" path="res://assets/canvas/Others/character.png" id="2_mveoo"]
-[ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/chapter/chapter_1.tscn" id="2_xj3lg"]
+[ext_resource type="PackedScene" uid="uid://cjpem23c0un7t" path="res://scenes/interlude/interlude_0.tscn" id="2_qu43s"]
 [ext_resource type="Texture2D" uid="uid://ck87bghdnh0kk" path="res://assets/emoji/emoji.png" id="3_mveoo"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="5_2x8kr"]
 [ext_resource type="Texture2D" uid="uid://bqigato7o5r85" path="res://assets/canvas/Others/bedroomAnimation-Sheet.png" id="6_vqrml"]
@@ -335,7 +335,7 @@ animations = [{
 script = ExtResource("1_d8e8j")
 beginning_pos = Vector2(300, 93)
 ending_pos = Vector2(112, 93)
-next_scene = ExtResource("2_xj3lg")
+next_scene = ExtResource("2_qu43s")
 metadata/_edit_horizontal_guides_ = [133.0]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

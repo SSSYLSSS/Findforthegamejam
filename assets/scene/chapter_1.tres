@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="NextScene" load_steps=3 format=3 uid="uid://qy8x555tlp44"]
 
 [ext_resource type="Script" uid="uid://d3eylou6fmh27" path="res://scripts/core/next_scene.gd" id="1_45tjf"]
-[ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="1_dq16y"]
+[ext_resource type="PackedScene" uid="uid://bb2y06a43jfa5" path="res://scenes/interlude/interlude_2.tscn" id="1_dq16y"]
 
 [resource]
 script = ExtResource("1_45tjf")

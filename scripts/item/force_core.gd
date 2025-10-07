@@ -60,7 +60,8 @@ func check_effective_distance(distance: float) -> void:
 			SoundManager.play_sfx("InForce")
 		elif force_in_out == -1:
 			SoundManager.play_sfx("OutForce")
-
+	if distance < effective_distance and distance > 5:
+		CameraShakeForAll.shake_camera(10 / distance)
 # 动态添加目标的方法
 func add_target(new_target: Node2D):
 	if not potential_targets.has(new_target):

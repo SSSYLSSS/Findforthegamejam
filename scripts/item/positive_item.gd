@@ -43,7 +43,12 @@ func _on_body_entered(body: Node2D) -> void:
 		anim.stop()
 		anim.play("positivebreak")
 		SoundManager.play_sfx("ItemBreak")
+		CameraShakeForAll.shake_camera(4)
 		positive_hit.emit()
+		
+		Engine.time_scale = 0.01
+		await get_tree().create_timer(0.1, true, false, true).timeout
+		Engine.time_scale = 1
 		# 禁用碰撞防止多次触发
 		collision.set_deferred("disabled", true)
 

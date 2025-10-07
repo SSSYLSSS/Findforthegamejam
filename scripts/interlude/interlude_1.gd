@@ -8,7 +8,7 @@ extends Control
 func _ready() -> void:
 	control.visible=false
 	label.text=""
-	await  get_tree().create_timer(10.0).timeout
+	await  get_tree().create_timer(2.0).timeout
 	anim.play("default")
 	await anim.animation_finished
 	control.visible=true

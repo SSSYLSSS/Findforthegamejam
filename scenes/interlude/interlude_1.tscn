@@ -1,36 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cjpem23c0un7t"]
 
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_psten"]
-[ext_resource type="Script" uid="uid://cugst7l7uehj" path="res://scenes/interlude/interlude_1.gd" id="1_vh6ly"]
-[ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="2_ocyi6"]
-
-[sub_resource type="Animation" id="Animation_psten"]
-resource_name = "default"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": ["你不必急于醒来", "向心之海潜去", "你终究安然无恙", "向下潜..."]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
+[ext_resource type="Script" uid="uid://cugst7l7uehj" path="res://scripts/interlude/interlude_1.gd" id="1_vh6ly"]
+[ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/chapter/chapter_1.tscn" id="2_ocyi6"]
 
 [sub_resource type="Animation" id="Animation_0scni"]
 length = 0.001
@@ -57,6 +29,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_psten"]
+resource_name = "default"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["你不必急于醒来", "向心之海潜去", "你终究安然无恙", "向下潜..."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uuf33"]
@@ -108,4 +108,13 @@ vertical_alignment = 1
 libraries = {
 &"": SubResource("AnimationLibrary_uuf33")
 }
-autoplay = "default"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]

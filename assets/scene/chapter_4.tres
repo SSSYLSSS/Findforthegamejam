@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="NextScene" load_steps=2 format=3 uid="uid://c6h3l576tbl8n"]
+
+[ext_resource type="Script" uid="uid://d3eylou6fmh27" path="res://scripts/core/next_scene.gd" id="1_hijo5"]
+
+[resource]
+script = ExtResource("1_hijo5")
+metadata/_custom_type_script = "uid://d3eylou6fmh27"

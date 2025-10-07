@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_u0756"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_3jfde"]
+[ext_resource type="Script" uid="uid://vgpr4s7nlxpb" path="res://scripts/core/shake_camera.gd" id="3_8co8o"]
 [ext_resource type="PackedScene" uid="uid://de5ua6mc7lko2" path="res://scenes/item/trap.tscn" id="3_ohofg"]
 [ext_resource type="Resource" uid="uid://hfm4fv380kx4" path="res://assets/spwan/chapter_3.tres" id="4_3jfde"]
 [ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="4_8co8o"]
@@ -143,6 +144,7 @@ b = Vector2(0, 48)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cyq8n"]
 
+
 [node name="Chapter_3" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
@@ -155,6 +157,7 @@ tile_set = SubResource("TileSet_xp84e")
 position = Vector2(0, -8)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+script = ExtResource("3_8co8o")
 
 [node name="Traps" type="Node2D" parent="."]
 

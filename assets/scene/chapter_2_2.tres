@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NextScene" load_steps=3 format=3 uid="uid://cugstmgjtucag"]
+
+[ext_resource type="PackedScene" uid="uid://4106e3hmuhhk" path="res://scenes/interlude/interlude_3.tscn" id="1_2pt33"]
+[ext_resource type="Script" uid="uid://d3eylou6fmh27" path="res://scripts/core/next_scene.gd" id="1_f82hp"]
+
+[resource]
+script = ExtResource("1_f82hp")
+next_scene = ExtResource("1_2pt33")
+metadata/_custom_type_script = "uid://d3eylou6fmh27"

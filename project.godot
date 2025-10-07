@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SoundManager="*res://scenes/core/sound_manager.tscn"
 LoadScene="*res://scenes/UI/load_scene.tscn"
+CameraShakeForAll="*res://scenes/core/camera_shake_for_all.tscn"
 
 [display]
 

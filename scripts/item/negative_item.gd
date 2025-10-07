@@ -42,13 +42,17 @@ func _on_body_entered(body: Node2D) -> void:
 		anim.stop()
 		anim.play("negativebreak")
 		SoundManager.play_sfx("ItemBreak")
+		CameraShakeForAll.shake_camera(4)
 		negative_hit.emit()
+		Engine.time_scale = 0.01
+		await get_tree().create_timer(0.1, true, false, true).timeout
+		Engine.time_scale = 1
 		# 禁用碰撞防止多次触发
 		collision.set_deferred("disabled", true)
 
 # 新增函数：处理动画完成事件
 func _on_animation_finished():
 	# 检查当前播放的动画是否是"positivebreak"
-	if anim.animation == "positivebreak":
+	if anim.animation == "negativebreak":
 		# 动画播放完成后删除节点
 		queue_free()

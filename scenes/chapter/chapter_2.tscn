@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=4 uid="uid://bw5hpqn03832n"]
+[gd_scene load_steps=23 format=4 uid="uid://bw5hpqn03832n"]
 
 [ext_resource type="Script" uid="uid://cbhm32penort2" path="res://scripts/chapter/chapter_1.gd" id="1_fnxso"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_yvy84"]
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="2_fnxso"]
 [ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="3_mjjcc"]
+[ext_resource type="Script" uid="uid://vgpr4s7nlxpb" path="res://scripts/core/shake_camera.gd" id="3_vi5x1"]
 [ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/core/death_zone.tscn" id="4_mjjcc"]
 [ext_resource type="Resource" uid="uid://qhcmv316tw2a" path="res://assets/spwan/chapter_2.tres" id="5_qsoyt"]
 [ext_resource type="PackedScene" uid="uid://bt3n6rdax31rf" path="res://scenes/item/negative_item.tscn" id="6_784j4"]
@@ -268,6 +269,16 @@ a = Vector2(0, -72)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7024r"]
 b = Vector2(0, 64)
 
+[sub_resource type="Environment" id="Environment_vi5x1"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.96
+glow_bloom = 0.02
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 2.83
+
 [node name="Chapter2" type="Node2D"]
 script = ExtResource("1_fnxso")
 
@@ -275,6 +286,7 @@ script = ExtResource("1_fnxso")
 position = Vector2(584, 152)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+script = ExtResource("3_vi5x1")
 
 [node name="Tilemaps" type="Node2D" parent="."]
 
@@ -434,4 +446,5 @@ position = Vector2(395, 214)
 scale = Vector2(4, 4)
 texture = ExtResource("13_1kbkq")
 
-[connection signal="body_entered" from="Items/PositiveItem" to="Items/PositiveItem" method="_on_body_entered"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vi5x1")

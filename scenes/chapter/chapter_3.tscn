@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://3blvhiwj64wr"]
+[gd_scene load_steps=10 format=4 uid="uid://3blvhiwj64wr"]
 
 [ext_resource type="Texture2D" uid="uid://c75ucjcgig12c" path="res://assets/canvas/tilemap/TILEMAP1forChapter1.png" id="1_u0756"]
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="2_3jfde"]
+[ext_resource type="Script" uid="uid://vgpr4s7nlxpb" path="res://scripts/core/shake_camera.gd" id="3_8co8o"]
 [ext_resource type="PackedScene" uid="uid://de5ua6mc7lko2" path="res://scenes/item/trap.tscn" id="3_ohofg"]
 [ext_resource type="Resource" uid="uid://hfm4fv380kx4" path="res://assets/spwan/chapter_3.tres" id="4_3jfde"]
 [ext_resource type="PackedScene" uid="uid://ba6u3w4jkqvmd" path="res://scenes/force_core.tscn" id="4_8co8o"]
@@ -131,6 +132,16 @@ texture = ExtResource("1_u0756")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3xo80")
 
+[sub_resource type="Environment" id="Environment_ohofg"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.96
+glow_bloom = 0.02
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 2.83
+
 [node name="Chapter_3" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
@@ -143,6 +154,7 @@ tile_set = SubResource("TileSet_xp84e")
 position = Vector2(-16, -8)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+script = ExtResource("3_8co8o")
 
 [node name="Traps" type="Node2D" parent="."]
 
@@ -217,3 +229,6 @@ position = Vector2(80, 64)
 
 [node name="force_core2" parent="ForceCores" instance=ExtResource("4_8co8o")]
 position = Vector2(0, 176)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ohofg")

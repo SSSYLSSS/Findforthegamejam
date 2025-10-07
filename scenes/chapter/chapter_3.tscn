@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bt3n6rdax31rf" path="res://scenes/item/negative_item.tscn" id="7_3xo80"]
 [ext_resource type="PackedScene" uid="uid://chieird44bnmo" path="res://scenes/core/exit_area.tscn" id="8_3xo80"]
 [ext_resource type="PackedScene" uid="uid://ce7dx2hhim5de" path="res://scenes/core/death_zone.tscn" id="9_xp84e"]
-[ext_resource type="Resource" uid="uid://c6h3l576tbl8n" path="res://assets/scene/chapter_4.tres" id="10_qrn4d"]
+[ext_resource type="Resource" uid="uid://dqrftxtyywoty" path="res://assets/scene/chapter_3.tres" id="10_qrn4d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xo80"]
 texture = ExtResource("1_u0756")

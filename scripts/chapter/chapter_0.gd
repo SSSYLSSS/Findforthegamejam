@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var emoji: AnimatedSprite2D = $Player/Emoji
@@ -6,9 +6,8 @@ extends Node
 @onready var text_box: Label = $Player/Text/TextBox
 @onready var text_timer: Timer = $Player/TextTimer
 
-@export var next_scene:PackedScene
-
 func _ready() -> void:
+	player.position=Vector2(73,103)
 	SoundManager.play_bgm("Intro1")
 	emoji.visible=false
 	text.visible=false

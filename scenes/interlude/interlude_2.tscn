@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bw5hpqn03832n" path="res://scenes/chapter/chapter_2.tscn" id="2_pev38"]
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="3_rdoaq"]
 
+
 [sub_resource type="Animation" id="Animation_ss2em"]
 length = 0.001
 tracks/0/type = "value"

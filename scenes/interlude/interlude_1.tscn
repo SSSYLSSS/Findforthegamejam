@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cugst7l7uehj" path="res://scripts/interlude/interlude_1.gd" id="1_vh6ly"]
 [ext_resource type="PackedScene" uid="uid://b7rr7xpc8u3k4" path="res://scenes/chapter/chapter_1.tscn" id="2_ocyi6"]
 
+
 [sub_resource type="Animation" id="Animation_0scni"]
 length = 0.001
 tracks/0/type = "value"

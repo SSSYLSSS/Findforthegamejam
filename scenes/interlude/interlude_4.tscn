@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://73q660wrssg2" path="res://assets/fonts/IPix中文像素字体.ttf" id="1_67h4c"]
 [ext_resource type="Script" uid="uid://bvk01rdu3r1ev" path="res://scripts/interlude/interlude_4.gd" id="1_xc2qs"]
 
+
 [sub_resource type="Animation" id="Animation_xc2qs"]
 length = 0.001
 tracks/0/type = "value"
